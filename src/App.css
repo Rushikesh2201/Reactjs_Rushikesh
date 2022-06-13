@@ -7,7 +7,8 @@
 }
 
 .App-header {
-  background-color:#ff4000;
+  background :linear-gradient(to left ,#0d0d0d ,#8c8c8c, #ff4000);
+  //background-color:#ff4000;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -89,14 +90,12 @@
 
 .CampaignGroupTableColumns{
   font-size : 1em;
-  padding-left: 2em;
-  justify-content :center;
+  padding-left : 5em;
+  padding-right  : 5em;
   text-align : center;
-  margin : 2em;
 }
 
 .CampaignGroupTableBody{
-    justify-content :center;
     text-align : center;
 }
 
@@ -106,9 +105,10 @@
   margin-top : 3em;
   height : 65em;
   width : 96%;
-  margin-right : 2em;
-  margin-left : 2.5em;
+  margin-right : 4em;
+  margin-left : 4em;
   border-radius :10px; 
+
 }
 
 .MainContent{
@@ -119,7 +119,7 @@
 .LocalParaDiv{
   background-color: darkorange;
   width : 22%;
-  height : 2em;
+  height : 2.5em;
   margin-left : 11em;
   border-radius  : 5px;
 }
@@ -144,13 +144,11 @@
   align-items : center;
   padding-left : 1em;
   margin-left :79%;
-  padding-bottom : .5em
 }
 .LocalUrl {
   font-size : 1em;
   font-family : arial;
   padding-right : 1.5em;
-  margin-bottom : 2px
 }
 
 
@@ -158,14 +156,13 @@
     flex : 1;
     display : flex;
     flex-direction : row;
-    padding-bottom : 1em;
-    padding-top  : 1em;
+  padding-top  : .5em;
+   margin-bottom : 2em;
 }
 
 .LocalSEOTable1{
   width : 49%;
   height : 15em;
-  padding : .5em;
   border : none;
   margin-left :2em;
   background-color : white;
@@ -175,11 +172,9 @@
   background-color : white;
   width : 49%;
   height : 15em;
-  padding : .5em;
   border : none;
   margin-right : 2em;
-  padding-left : .5em;
-  margin-left : 1em
+  margin-left : 1em;
 }
 
 .LocalSEOTableColumns{
@@ -191,15 +186,11 @@
 }
 
 .table2body{
-  /* margin-right :3em; */
-  padding-bottom : 3em;
-  padding-left : 2em;
-  text-align : center;
+
 }
 
 .RowStyle{
   text-align : center;
-  padding-left : 5em;
 }
 
 .CampaignGroupTableColumns1{
@@ -213,6 +204,5 @@
 
 .LocalSEOTableColumns1{
   justify-content : center;
-  padding-left : 6.5em;
   background-color : #ff4000;
 }

@@ -1,10 +1,10 @@
 import "./App.css";
 //import {Gradient} from 'react-gradient';
 import React, { Component } from "react";
+//import Media from "react-media";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faMagnifyingGlassChart} from "@fortawesome/free-solid-svg-icons"
 
-// const gradient = [
-//    [ '#ff4000', '#666666', '#000000' ]
-// ]
 
 export class App extends Component {
 
@@ -13,6 +13,9 @@ export class App extends Component {
   super();
 
    this.state = {
+
+    device : "mobile",
+
       data :
       [
 
@@ -163,20 +166,24 @@ export class App extends Component {
   rows : '',
 
    }
+
+
 console.log(this.state.data);
+
+
   } //Close constructorconstructor
 
   render() {
     return (
       <div className="container">
+        {/* <Media
+          queries = {{ medium: "(max-width: 1024px)" }}
+          defaultMatches={{ medium: this.state.device === 'mobile' }}
+          render={() =><h1>Hiii</h1> } /> */}
+         
         <div className="App">
           <header className="App-header">
-            {/* <Gradient 
-           gradient ={ gradient } 
-           property="background"
-            duration={ 3000 }
-           angle="45deg"
-          />     */}
+          
             <h1 className="Title">Monthly Report </h1>
             <small className="small">Tobey Harris - Heath's Auto</small>
             <div className="TextLead">
@@ -290,8 +297,13 @@ console.log(this.state.data);
             </div>
           </div>
           <div className="container2">
+           
             <div className="MainContent">
-              <h2 className="Local">Local SEO</h2>
+            <FontAwesomeIcon icon={faMagnifyingGlassChart}
+                size = "10x"
+
+            />
+         <h2 className="Local">Local SEO</h2>
 
               <div className="LocalUrlDiv">
                 <h2 className="LocalUrl">URL used for reports</h2>
@@ -405,6 +417,7 @@ console.log(this.state.data);
             </div>
           </div>
         </div>
+         
       </div>
     );
   }
