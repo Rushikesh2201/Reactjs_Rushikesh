@@ -3,10 +3,13 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../../utils/actions";
+import { useHistory } from "react-router-dom";
 
 import styles from "./index.module.css";
-
+import Logo from "./../../../../assets/svg/logo.png";
 const Login = () => {
+  let history = useHistory();
+
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,17 +18,17 @@ const Login = () => {
   const database = [
     {
       username: "user1",
-      password: "pass1"
+      password: "pass1",
     },
     {
       username: "user2",
-      password: "pass2"
-    }
+      password: "pass2",
+    },
   ];
 
   const errors = {
     uname: "Invalid Username",
-    pass: "Invalid Password"
+    pass: "Invalid Password",
   };
 
   const handleSubmit = (event) => {
@@ -44,6 +47,7 @@ const Login = () => {
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
+        history.push("/dashboard");
       }
     } else {
       // Username not found
@@ -54,7 +58,7 @@ const Login = () => {
   // Generate JSX code for error message
   const renderErrorMessage = (name) =>
     name === errorMessages.name && (
-      <div className={styles.error}>{errorMessages.message}</div>
+      <label className={styles.error}>{errorMessages.message}</label>
     );
 
   // JSX code for login form
@@ -80,15 +84,15 @@ const Login = () => {
 
   return (
     <div className={styles.app}>
+      <img src={Logo} alt="logo" className={styles.logoStyle} />
+
       <div className={styles.loginForm}>
         <div className={styles.title}>Sign In</div>
         {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
       </div>
     </div>
   );
-}
-
-
+};
 
 export default connect((state) => ({ user: state.user }), {
   setUser,
