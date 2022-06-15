@@ -1,4 +1,4 @@
-import "./App.css";
+import "./components/css/App.css";
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +8,6 @@ export class App extends Component {
     super();
 
     this.state = {
-      device: "mobile",
 
       data: [
         {
