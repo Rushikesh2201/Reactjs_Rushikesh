@@ -6,19 +6,20 @@ import Table from "./Table";
 import Tags from "./Tags";
 import Table2 from "./Table2";
 import CallDetailsLink from "./CallDetailsLink";
+import Styles from '../../css/MonthlyReport/main.module.css'
 
 export class MonthlyReport extends Component {
   render() {
     return (
-      <div className="container">
-        <div className="App">
+      <div className={Styles.container}>
+        <div className={Styles.App}>
           <Header />
           <GoogleAds />
 
-          <div className="MainContiner">
+          <div className={Styles.MainContiner}>
             <Table />
           </div>
-          <div className="container2">
+          <div className={Styles.container2}>
             <Tags />
             <div>
               <Table2 />

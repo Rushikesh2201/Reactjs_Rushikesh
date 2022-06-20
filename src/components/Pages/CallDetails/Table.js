@@ -1,5 +1,6 @@
 
 import React, {Component} from "react";
+import Styles from '../../css/CallDetails/Table.module.css'
 
 export class Table extends Component {
 
@@ -40,26 +41,26 @@ export class Table extends Component {
 
     render(){
         return(
-            <table className="table">
+            <table className={Styles.table}>
             <thead>
               <tr>
-                <th className="tableHeading1">Name</th>
-                <th className="tableHeading">First Time</th>
-                <th className="tableHeading">Answered</th>
-                <th className="tableHeading">Missed</th>
-                <th className="tableHeading">Total</th>
-                <th className="tableHeading">Average Duration</th>
+                <th className={Styles.tableHeading1}>Name</th>
+                <th className={Styles.tableHeading}>First Time</th>
+                <th className={Styles.tableHeading}>Answered</th>
+                <th className={Styles.tableHeading}>Missed</th>
+                <th className={Styles.tableHeading}>Total</th>
+                <th className={Styles.tableHeading}>Average Duration</th>
               </tr>
             </thead>
             {this.state.data.map((rowdata, i) => (
-              <tbody className="tableBody">
+              <tbody className={Styles.tableBody}>
                 <tr>
-                  <td className="tableData1">{rowdata.name}</td>
-                  <td className="tableData">{rowdata.first_time}</td>
-                  <td className="tableData">{rowdata.Answered}</td>
-                  <td className="tableData">{rowdata.Missed}</td>
-                  <td className="tableData">{rowdata.Total}</td>
-                  <td className="tableData">{rowdata.Average_Duration}</td>
+                  <td className={Styles.tableData1}>{rowdata.name}</td>
+                  <td className={Styles.tableData}>{rowdata.first_time}</td>
+                  <td className={Styles.tableData}>{rowdata.Answered}</td>
+                  <td className={Styles.tableData}>{rowdata.Missed}</td>
+                  <td className={Styles.tableData}>{rowdata.Total}</td>
+                  <td className={Styles.tableData}>{rowdata.Average_Duration}</td>
                 </tr>
               </tbody>
             ))}

@@ -1,0 +1,111 @@
+.campaign {
+  font-size: 1.7em;
+  font-family: arial;
+  padding-left: 1.5em;
+  margin-bottom: 2px;
+}
+
+.Table1 {
+  margin-left: 2.5em;
+  width: 96%;
+  border-spacing: 0px;
+}
+
+.Table1column {
+  font-size: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+  text-align: center;
+  border: 1px solid;
+}
+
+.Table1Body {
+  text-align: center;
+}
+
+.Table1Data {
+  text-align: center;
+  border: 1px solid;
+}
+
+.Table1Data1 {
+  text-align: center;
+  border: 1px solid;
+}
+
+.Table1column1 {
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+  align-items: center;
+  background-color: #ff4000;
+}
+
+@media (max-width: 500px) {
+  .MainContiner {
+    margin-left: 1em;
+    align-items: center;
+    width: 92%;
+  }
+
+  .TableContainer {
+    width: auto;
+    overflow-x: anywhere;
+    margin-right: 1em;
+  }
+
+  .campaign {
+    font-size: 1.2em;
+    font-family: arial;
+    padding-left: 1.4em;
+    padding-right: 3em;
+    margin-bottom: 2px;
+    width: 52%;
+  }
+
+  .Table1 {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    overflow-x: anywhere;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Table1column {
+    height: 2.4em;
+    display: flex;
+    width: 9.7%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .Table1column1 {
+    height: 3.3em;
+    display: flex;
+    width: 63%;
+    flex-direction: row;
+    border: 1px solid;
+    justify-content: center;
+  }
+  .Table1Data {
+    width: 8em;
+    height: 2.4em;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: anywhere;
+  }
+
+  .Table1Data1 {
+    width: 8em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: anywhere;
+  }
+  .Table1Body {
+    margin-left: -5.2em;
+  }
+}

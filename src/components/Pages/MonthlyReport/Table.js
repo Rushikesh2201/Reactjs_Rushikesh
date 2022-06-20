@@ -1,5 +1,6 @@
 
 import React , {Component} from "react";
+import Styles from '../../css/MonthlyReport/Table.module.css'
 
 export class Table extends Component{
     constructor() {
@@ -12,7 +13,7 @@ export class Table extends Component{
               name: "Campaign group",
               CAMPAIGN: "Ascot_Automotive_<A5U>",
               CLICKS: 211,
-              IMPRESSIONS: 3622,
+              IMPRESSIONS:  3622,
               CTR: "5.83%",
               AVGCPC: " $7.3",
               COST: "$1539.98",
@@ -46,86 +47,86 @@ export class Table extends Component{
     }   
     render(){
         return(
-            <div className="TableContainer">
-              <h3 className="campaign">Campaign group </h3>
+            <div className={Styles.TableContainer}>
+              <h3 className={Styles.campaign}>Campaign group </h3>
            
-              <table className="Table1">
+              <table className={Styles.Table1}>
                 <thead>
                   <tr>
-                    <th className="Table1column1">CAMPAIGN</th>
-                    <th className="Table1column">CLICKS</th>
-                    <th className="Table1column">IMPRESSIONS</th>
-                    <th className="Table1column">CTR</th>
-                    <th className="Table1column">AVG. CPC </th>
-                    <th className="Table1column">COST</th>
+                    <th className={Styles.Table1column1}>CAMPAIGN</th>
+                    <th className={Styles.Table1column}>CLICKS</th>
+                    <th className={Styles.Table1column}>IMPRESSIONS</th>
+                    <th className={Styles.Table1column}>CTR</th>
+                    <th className={Styles.Table1column}>AVG. CPC </th>
+                    <th className={Styles.Table1column}>COST</th>
                   </tr>
                 </thead>
                 {this.state.data.map((rowdata, i) => (
-                  <tbody className="Table1Body">
+                  <tbody className={Styles.Table1Body}>
                     <tr>
-                      <td className="Table1Data">{rowdata.CAMPAIGN}</td>
-                      <td className="Table1Data">{rowdata.CLICKS}</td>
-                      <td className="Table1Data">{rowdata.IMPRESSIONS}</td>
-                      <td className="Table1Data">{rowdata.CTR}</td>
-                      <td className="Table1Data">{rowdata.AVGCPC}</td>
-                      <td className="Table1Data">{rowdata.COST}</td>
+                      <td className={Styles.Table1Data1}>{rowdata.CAMPAIGN}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CLICKS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.IMPRESSIONS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CTR}</td>
+                      <td className={Styles.Table1Data}>{rowdata.AVGCPC}</td>
+                      <td className={Styles.Table1Data}>{rowdata.COST}</td>
                     </tr>
                   </tbody>
                 ))}
               </table>
 
-            <h3 className="campaign">Campaign group: Heath's Auto Service </h3>
-              <table className="Table1">
+            <h3 className={Styles.campaign}>Campaign group: Heath's Auto Service </h3>
+              <table className={Styles.Table1}>
                 <thead>
                   <tr>
-                    <th className="Table1column1">CAMPAIGN</th>
-                    <th className="Table1column">CLICKS</th>
-                    <th className="Table1column">IMPRESSIONS</th>
-                    <th className="Table1column">CTR</th>
-                    <th className="Table1column">AVG. CPC </th>
-                    <th className="Table1column">COST</th>
+                    <th className={Styles.Table1column1}>CAMPAIGN</th>
+                    <th className={Styles.Table1column}>CLICKS</th>
+                    <th className={Styles.Table1column}>IMPRESSIONS</th>
+                    <th className={Styles.Table1column}>CTR</th>
+                    <th className={Styles.Table1column}>AVG. CPC </th>
+                    <th className={Styles.Table1column}>COST</th>
                   </tr>
                 </thead>
 
                 {this.state.data1.map((rowdata, i) => (
-                  <tbody className="Table1Body">
+                  <tbody className={Styles.Table1Body}>
                     <tr>
-                      <td className="Table1Data">{rowdata.CAMPAIGN}</td>
-                      <td className="Table1Data">{rowdata.CLICKS}</td>
-                      <td className="Table1Data">{rowdata.IMPRESSIONS}</td>
-                      <td className="Table1Data">{rowdata.CTR}</td>
-                      <td className="Table1Data">{rowdata.AVGCPC}</td>
-                      <td className="Table1Data">{rowdata.COST}</td>
+                      <td className={Styles.Table1Data1}>{rowdata.CAMPAIGN}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CLICKS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.IMPRESSIONS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CTR}</td>
+                      <td className={Styles.Table1Data}>{rowdata.AVGCPC}</td>
+                      <td className={Styles.Table1Data}>{rowdata.COST}</td>
                     </tr>
                   </tbody>
                 ))}
               </table>
 
-            <h3 className="campaign">
+            <h3 className={Styles.campaign}>
               Campaign group: University Auto Repair
             </h3>
 
-              <table className="Table1">
+              <table className={Styles.Table1}>
                 <thead>
                   <tr>
-                    <th className="Table1column1">CAMPAIGN</th>
-                    <th className="Table1column">CLICKS</th>
-                    <th className="Table1column">IMPRESSIONS</th>
-                    <th className="Table1column">CTR</th>
-                    <th className="Table1column">AVG. CPC </th>
-                    <th className="Table1column">COST</th>
+                    <th className={Styles.Table1column1}>CAMPAIGN</th>
+                    <th className={Styles.Table1column}>CLICKS</th>
+                    <th className={Styles.Table1column}>IMPRESSIONS</th>
+                    <th className={Styles.Table1column}>CTR</th>
+                    <th className={Styles.Table1column}>AVG. CPC </th>
+                    <th className={Styles.Table1column}>COST</th>
                   </tr>
                 </thead>
 
                 {this.state.data2.map((rowdata, i) => (
-                  <tbody className="Table1Body">
+                  <tbody className={Styles.Table1Body}>
                     <tr>
-                      <td className="Table1Data">{rowdata.CAMPAIGN}</td>
-                      <td className="Table1Data">{rowdata.CLICKS}</td>
-                      <td className="Table1Data">{rowdata.IMPRESSIONS}</td>
-                      <td className="Table1Data">{rowdata.CTR}</td>
-                      <td className="Table1Data">{rowdata.AVGCPC}</td>
-                      <td className="Table1Data">{rowdata.COST}</td>
+                      <td className={Styles.Table1Data1}>{rowdata.CAMPAIGN}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CLICKS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.IMPRESSIONS}</td>
+                      <td className={Styles.Table1Data}>{rowdata.CTR}</td>
+                      <td className={Styles.Table1Data}>{rowdata.AVGCPC}</td>
+                      <td className={Styles.Table1Data}>{rowdata.COST}</td>
                     </tr>
                   </tbody>
                 ))}

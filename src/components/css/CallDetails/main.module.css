@@ -1,0 +1,17 @@
+
+.container {
+    flex: 1;
+    overflow-x : hidden;
+  }  
+
+.tableDiv {
+    padding-bottom: 29em;
+  }
+
+@media(max-width :500px){
+    .tableDiv {
+        width: auto;
+        overflow-x: auto;
+        padding-bottom: 0em;
+      }
+}

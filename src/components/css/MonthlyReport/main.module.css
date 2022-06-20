@@ -1,0 +1,28 @@
+
+
+.container {
+    flex: 1;
+    overflow-x : hidden;
+  }
+
+  .container2 {
+    flex: 1;
+    background: #cccccc;
+    height: 73em;
+    width: 96%;
+    margin-right: 2em;
+    margin-left: 2.1em;
+    border-radius: 10px;
+  }
+  @media (max-width: 500px) {
+    .container {
+      overflow-x : hidden;
+    }
+    .container2 {
+        width: 94%;
+        height: 115em;
+        margin-left: 0.8em;
+        margin-right: 1em;
+        margin-bottom: 10px;
+      }
+}

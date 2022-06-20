@@ -1,0 +1,59 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1.7em;
+}
+
+.IconCall {
+  margin-left: 0.3em;
+  padding-right: 0.1em;
+  margin-top: 0.3em;
+}
+
+.Heading {
+  margin-bottom: 3em;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  width: 130%;
+  margin-top: -2em;
+  margin-left: 11em;
+}
+
+.Text {
+  background: orange;
+  width: 2%;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 0.2em;
+}
+
+.HeadingCall {
+  margin-left: 4.5em;
+  margin-top: -2.7em;
+}
+
+.IconArrow {
+  padding-left: 0.5em;
+  padding-top: 1em;
+  padding-right: 0.5em;
+}
+
+@media (max-width: 500px) {
+  .content {
+    width: 100%;
+    padding-top: 2em;
+    margin-right: 1.1em;
+  }
+
+  .IconCall {
+    margin-top: 0.3em;
+  }
+
+  .Heading {
+    margin-left: 9em;
+    margin-top: -7em;
+  }
+}

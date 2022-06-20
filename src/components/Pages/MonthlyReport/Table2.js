@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlassChart} from '@fortawesome/free-solid-svg-icons'
+import Styles from "../../css/MonthlyReport/Table2.module.css"
 
 export class Table2 extends Component{
         constructor(){
@@ -124,102 +125,104 @@ export class Table2 extends Component{
     render(){
         return(
             <div>
-            <div className="LocalTableDiv">
-              <table className="Table2">
+            <div className={Styles.LocalTableDiv}>
+              <table className={Styles.Table2}>
                 <thead>
                   <tr>
-                    <th className="Table2column1">QUERY (desktop) </th>
-                    <th className="Table2column">POSITION</th>
-                    <th className="Table2column">LOCATION</th>
+                    <th className={Styles.Table2column1}>QUERY (desktop) </th>
+                    <th className={Styles.Table2column}>POSITION</th>
+                    <th className={Styles.Table2column}>LOCATION</th>
                   </tr>
                 </thead>
 
                 {this.state.data3.map((rowdata, i) => (
-                  <tbody className="table2body">
+                  <tbody className={Styles.table2body}>
                     <tr>
-                      <td className="Table2Data">{rowdata.name}</td>
-                      <td className="Table2Data">{rowdata.position}</td>
-                      <td className="Table2Data">{rowdata.location}</td>
+                      <td className={Styles.Table2Data}>{rowdata.name}</td>
+                      <td className={Styles.Table2Data}>{rowdata.position}</td>
+                      <td className={Styles.Table2Data}>{rowdata.location}</td>
                     </tr>
                   </tbody>
                 ))}
               </table>
 
-              <table className="Table3">
+              <table className={Styles.Table3}>
                 <thead>
                   <tr>
-                    <th className="Table2column1">QUERY (mobile) </th>
-                    <th className="Table2column">POSITION</th>
-                    <th className="Table2column">LOCATION</th>
+                    <th className={Styles.Table2column1}>QUERY (mobile) </th>
+                    <th className={Styles.Table2column}>POSITION</th>
+                    <th className={Styles.Table2column}>LOCATION</th>
                   </tr>
                 </thead>
                 {this.state.data4.map((rowdata, i) => (
-                  <tbody className="table2body">
+                  <tbody className={Styles.table2body}>
                     <tr>
-                      <td className="Table2Data">{rowdata.name}</td>
-                      <td className="Table2Data">{rowdata.position}</td>
-                      <td className="Table2Data">{rowdata.location}</td>
+                      <td className={Styles.Table2Data}>{rowdata.name}</td>
+                      <td className={Styles.Table2Data}>{rowdata.position}</td>
+                      <td className={Styles.Table2Data}>{rowdata.location}</td>
                     </tr>
                   </tbody>
                 ))}
               </table>
             </div>
-            <div className="Content">
-            <div className="MainContent1">
-              <h2 className="Local">
+            <div className={Styles.Content}>
+            <div className={Styles.MainContent1}>
+             
                 <FontAwesomeIcon
                   icon={faMagnifyingGlassChart}
-                  className="Icon"
-                  size="5x"
+                  className={Styles.Icon}
+                  size="10x"
                 />
+                 <h2 className={Styles.Local}>
                 Local SEO
               </h2>
             </div>
-              <div className="LocalUrlDiv1">
-                <h2 className="LocalUrl">URL used for reports</h2>
+              <div className={Styles.LocalUrlDiv1}>
+                <h2 className={Styles.LocalUrl}>URL used for reports</h2>
               </div>
             </div>
 
-            <div className="LocalParaDiv">
-              <p className="LocalPara">
+            <div className={Styles.LocalParaDiv}>
+              <p className={Styles.LocalPara}>
                 TOP 5 KEYWORDS BY PLATFORM (07 - 31 - 2021)
               </p> 
             </div>
+            
            
-            <div className="LocalTableDiv">
-              <table className="Table2">
+            <div className={Styles.LocalTableDiv}>
+              <table className={Styles.Table2}>
                 <thead>
                   <tr>
-                    <th className="Table2column1">QUERY (desktop) </th>
-                    <th className="Table2column">POSITION</th>
-                    <th className="Table2column">LOCATION</th>
+                    <th className={Styles.Table2column1}>QUERY (desktop) </th>
+                    <th className={Styles.Table2column}>POSITION</th>
+                    <th className={Styles.Table2column}>LOCATION</th>
                   </tr>
                 </thead>
                 {this.state.data5.map((rowdata, i) => (
-                  <tbody className="table2body">
+                  <tbody className={Styles.table2body}>
                     <tr>
-                      <td className="Table2Data">{rowdata.name}</td>
-                      <td className="Table2Data">{rowdata.position}</td>
-                      <td className="Table2Data">{rowdata.location}</td>
+                      <td className={Styles.Table2Data}>{rowdata.name}</td>
+                      <td className={Styles.Table2Data}>{rowdata.position}</td>
+                      <td className={Styles.Table2Data}>{rowdata.location}</td>
                     </tr>
                   </tbody>
                 ))}
               </table>
 
-              <table className="Table3">
+              <table className={Styles.Table3}>
                 <thead>
                   <tr>
-                    <th className="Table2column1">QUERY (mobile) </th>
-                    <th className="Table2column">POSITION</th>
-                    <th className="Table2column">LOCATION</th>
+                    <th className={Styles.Table2column1}>QUERY (mobile) </th>
+                    <th className={Styles.Table2column}>POSITION</th>
+                    <th className={Styles.Table2column}>LOCATION</th>
                   </tr>
                 </thead>
                 {this.state.data6.map((rowdata, i) => (
-                  <tbody className="table2body">
+                  <tbody className={Styles.table2body}>
                     <tr>
-                      <td className="Table2Data">{rowdata.name}</td>
-                      <td className="Table2Data">{rowdata.position}</td>
-                      <td className="Table2Data">{rowdata.location}</td>
+                      <td className={Styles.Table2Data}>{rowdata.name}</td>
+                      <td className={Styles.Table2Data}>{rowdata.position}</td>
+                      <td className={Styles.Table2Data}>{rowdata.location}</td>
                     </tr>
                   </tbody>
                 ))}

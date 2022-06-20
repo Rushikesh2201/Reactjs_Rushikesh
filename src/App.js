@@ -1,6 +1,4 @@
 
-import "./components/css/App.css";
-import "./components/css/call.css";
 import React from "react";
 import MonthlyReport from "./components/Pages/MonthlyReport/main";
 import Call from "./components/Pages/CallDetails/main";

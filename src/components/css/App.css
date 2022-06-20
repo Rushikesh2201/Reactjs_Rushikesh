@@ -1,11 +1,11 @@
-
+/* 
 .container {
   flex: 1;
+  overflow-x : hidden;
 }
 
 .App-header {
-  background: linear-gradient(to left, #0d0d0d, #8c8c8c, #ff4000);
-  min-height: 10vh;
+  background: linear-gradient(to left, #333, #333 20%, #566D7E 50%, #ff4000 50%); 
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -186,6 +186,11 @@
   border: 1px solid;
 }
 
+.Table1Data1{
+  text-align: center;
+  border: 1px solid;
+}
+
 .Table2Data {
   text-align: center;
 }
@@ -231,33 +236,36 @@
 
 .IconRegistered{
   padding-bottom : .5em;
-  background : black;
   color: white; 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+  .container {
+    overflow-x : hidden;
+  }
   .container2 {
     width: 94%;
     height: 110em;
-    margin-left: 1em;
+    margin-left: 0.8em;
     margin-right: 1em;
     margin-bottom: 10px;
   }
 
-  .LocalTableDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .Table2 {
-    margin-bottom: 1em;
-    margin-right: 2em;
-    width: auto;
+  .App-header{
+    width: 90.5%;
   }
 
-  .campaign {
-    padding-right: 3em;
+  .MainContiner{
+    margin-left : 1em;
+    align-items : center;
+    width : 92%;
   }
+
+  .TableContainer{
+    width : auto;
+    overflow-x : anywhere;
+    margin-right: 1em;
+    }
 
   .Table3 {
     margin-top: 1em;
@@ -276,15 +284,6 @@
     overflow-wrap: anywhere;
   }
 
-  .LocalParaDiv {
-    margin-left: 3em;
-    width: 60%;
-  }
-  .LocalPara {
-    padding-top: 0.5px;
-    overflow-wrap: anywhere;
-  }
-
   .LocalUrl {
     overflow-wrap: anywhere;
   }
@@ -297,11 +296,8 @@
     padding-right: 3em;
   }
 
-  .App-header{
-    width : 95%;
-  }
-
   .App2 {
+    width : 40%;
     margin-left: 1.2em;
   }
 
@@ -318,39 +314,97 @@
     font-size: 1.2em;
     font-family: arial;
     padding-left: 1.4em;
+    padding-right: 3em;
     margin-bottom: 2px;
+    width : 50%;
   }
 
   .Table1 {
+    width : auto; 
     display: flex;
     flex-direction: row;
     margin-left: 1em;
+    overflow-x : anywhere; 
+    justify-content  : center;  
+    align-items : center;
   }
 
   .Table1column {
     height: 2.4em;
     display: flex;
+    width : 9.7%;
     flex-direction: row;
     justify-content: center;
   }
 
   .Table1column1 {
-    height: 2.3em;
+    height: 3.3em;
     display: flex;
+    width : 63%;
     flex-direction: row;
     border: 1px solid;
     justify-content: center;
   }
   .Table1Data {
-    width: 12em;
+    width: 8em;
     height: 2.4em;
     display: flex;
     justify-content: center;
     overflow-wrap: anywhere;
   }
+
+  .Table1Data1{
+    width: 8em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    overflow-wrap: anywhere;
+  }
+
   .IconRegistered{
     background : none;  
    }
+
+   .Table1Body{
+     margin-left : -5.2em;
+   }
+
+   .Local{
+    margin-top : -1.5em;
+     margin-left : 4em;  
+   }
+
+   .Icon{
+     width : 35%;
+     margin-left: 0.4em;
+
+   }
+
+  .LocalParaDiv {
+    margin-left: 2em;
+    margin-right : 2em;
+    width:  auto; 
+    align-items : center;
+  }
+  .LocalPara {
+    padding-top: 1px;
+    overflow-wrap: anywhere;
+  }
+
+  .Table2column {
+  padding-left : 0.1em;
+  padding-right : 0.1em;
+  }
+
+  .LocalTableDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x : anywhere;
+  }
+  .Table2 {
+    margin-bottom: 1em;
+    margin-right: 2em;
+  }
 }
-
-
+ */
