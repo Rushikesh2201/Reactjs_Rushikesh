@@ -177,10 +177,12 @@ export class Table2 extends Component{
                 Local SEO
               </h2>
             </div>
+
+            </div>
               <div className={Styles.LocalUrlDiv1}>
                 <h2 className={Styles.LocalUrl}>URL used for reports</h2>
               </div>
-            </div>
+           
 
             <div className={Styles.LocalParaDiv}>
               <p className={Styles.LocalPara}>

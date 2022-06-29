@@ -1,99 +1,123 @@
-
 .container2 {
-    flex: 1;
-    background: #cccccc;
-    height: 75em;
-    width: 96%;
-    margin-right: 2em;
-    margin-left: 2.1em;
-    border-radius: 10px;
-  }
+  flex: 1;
+  background: #cccccc;
+  height: 75em;
+  width: 96%;
+  margin-right: 2em;
+  margin-left: 2.1em;
+  border-radius: 10px;
+}
 
 .MainContent {
-    padding: 2em;
-    margin-top: 2em;
-  }
-  
-  .Icon {
-    padding-left : 1em;
-    width : 20%;
-  }
-  .Local {
-    padding-left: 8em;
-    margin-top: -2.5em;
-    font-size : 3em;
+  padding: 2em;
+  margin-top: 2em;
+}
+
+.Icon {
+  margin-left : -2.2em;
+  //margin-right: 1em;
+  width: 50%;
+}
+.Local {
+  margin-left: 3.6em;
+  margin-top: -3.4em;
+  font-size: 2.5em;
+}
+
+.LocalPara {
+  padding-left: 0.5em;
+  color: white;
+  padding-top: 0.4em;
+}
+
+.LocalUrlDiv {
+  background-color: gray;
+  height: 3em;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1em;
+  margin-top: -8.5em;
+  margin-left: 71%;
+}
+.LocalUrl {
+  font-size: 1em;
+  font-family: arial;
+  padding-right: 1.5em;
+}
+
+.LocalParaDiv {
+  background-color: darkorange;
+  width: 22%;
+  height: 1.9em;
+  margin-left: 9.1em;
+  border-radius: 5px;
+  margin-top: 3.8em;
+  margin-bottom: 3em;
+}
+
+@media screen and (max-width: 500px) {
+  .MainContent{
+    margin-top : 1em;
   }
 
-  .LocalPara {
-    padding-left: 0.5em;
-    color: white;
-    padding-top: 0.5em;
+  .Local {
+    margin-top: -4.9em;
+    margin-left: 2.9em;
+    font-size: 1.5em;
   }
-  
-  .LocalUrlDiv {
-    background-color: gray;
-    height: 3em;
-    width: 22%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 1em;
-    margin-left: 79%;
-  }
-  .LocalUrl {
-    font-size: 1em;
-    font-family: arial;
-    padding-right: 1.5em;
+
+  .Icon {
+    width: 30%;
+    margin-left: -0.1em;
+    /* margin-top : -0.2em; */
   }
 
   .LocalParaDiv {
-    background-color: darkorange;
-    width: 22%;
-    height: 2.5em;
-    margin-left: 16em;
-    border-radius: 5px;
+    margin-left: 4.5em;
+    margin-top: 3.8em;
+    //margin-right: 2em;
+    width: 65%;
+    align-items: center;
+  }
+  .LocalPara {
+    font-size: 0.7em;
+    padding-top: 6px;
   }
 
-  @media(max-width : 500px){
- .container2 {
-    width: 94%;
-    height: 110em;
-    margin-left: 0.8em;
-    margin-right: 1em;
-    margin-bottom: 10px;
+  .LocalUrlDiv {
+    margin-top: -7.6em;
+    margin-left: 48%;
+    width: 57%;
+    height :15%;
+  }
+}
+
+@media screen and (min-width : 501px) and (max-width : 1000px){
+
+  .LocalUrlDiv {
+    margin-top : -7.5em;
+    margin-left: 72.3%;
+  }
+
+  .Icon{
+    width: 30%;
+    margin-left : -.2em;
   }
 
   .Local{
-    margin-top : -2.7em;
-     margin-left : -4.5em;  
-     font-size : 3em;
-   }
-
-   .Icon{
-     width : 35%;
-     margin-left: -0.7em;
-   }
+    margin-top: -4em;
+    margin-left: 3.8em;
+    font-size: 2.2em;
+  }
 
   .LocalParaDiv {
-    margin-left: 2em;
-    margin-right : 2em;
-    width:  auto; 
-    align-items : center;
+    margin-left: 8.5em;
+    margin-top: 3.4em;
+    margin-bottom : 3em;
+    //margin-right: 2em;
+    width: 53%;
+    align-items: center;
   }
-  .LocalPara {
-    padding-top: 1px;
-    overflow-wrap: anywhere;
-  }
-
-
-  .LocalUrlDiv {
-    margin-left: 55%;
-    width: 50%;
-    overflow-wrap: anywhere;
-  }
-
-  .LocalUrl {
-    overflow-wrap: anywhere;
-  }
-
-  }
+}

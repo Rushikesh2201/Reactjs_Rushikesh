@@ -6,7 +6,7 @@
     #566d7e 50%,
     #ff4000 50%
   );
-  min-height: 10vh;
+  height: 5em;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -18,7 +18,7 @@
 }
 
 .Title {
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-size: 1em;
   font-family: arial;
   padding-left: 1.5em;
@@ -39,11 +39,36 @@
 .LeadTextH1 {
   font-size: 1em;
   font-family: arial;
-  padding-right: 1.5em;
-  margin-bottom: 2px;
+  padding-right: .5em;
+  margin-top: 0.2em;
 }
 
 .IconRegistered {
   padding-bottom: 0.5em;
   color: white;
+}
+
+@media(max-width : 500px){
+
+  .header{
+    height: 5em;
+  }
+
+  .Title{
+    padding-left: 0.7em;
+    margin-top : 1.5em; 
+  }
+
+  .smallText{
+    padding-left: 1.2em;
+  }
+
+  .LeadTextH1{
+    margin-top: -.1em;  
+    padding-right: .5em; 
+  }
+}
+
+@media(max-width : 1000px){
+  
 }
