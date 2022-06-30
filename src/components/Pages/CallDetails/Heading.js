@@ -29,7 +29,7 @@ export class Heading extends Component{
                 size=""
               />
 
-              <p className={Styles.Text}>TO </p>
+              <p className={Styles.Text1}>TO </p>
               <p>07 - 31 - 2021</p>
             </small>
           </div>

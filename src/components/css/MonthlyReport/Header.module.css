@@ -11,7 +11,6 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-
   margin-top: 1em;
   margin-right: 1em;
   margin-left: 1em;
@@ -39,7 +38,7 @@
 .LeadTextH1 {
   font-size: 1em;
   font-family: arial;
-  padding-right: .5em;
+  padding-right: 0.5em;
   margin-top: 0.2em;
 }
 
@@ -48,27 +47,29 @@
   color: white;
 }
 
-@media(max-width : 500px){
-
-  .header{
+@media screen and (max-width: 500px) {
+  .header {
     height: 5em;
   }
 
-  .Title{
+  .Title {
     padding-left: 0.7em;
-    margin-top : 1.5em; 
+    margin-top: 1.5em;
   }
 
-  .smallText{
+  .smallText {
     padding-left: 1.2em;
   }
 
-  .LeadTextH1{
-    margin-top: -.1em;  
-    padding-right: .5em; 
+  .LeadTextH1 {
+    margin-top: -0.1em;
+    padding-right: 0.5em;
   }
 }
 
-@media(max-width : 1000px){
-  
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .LeadTextH1 {
+    margin-top: -0.1em;
+    padding-right: 0.5em;
+  }
 }

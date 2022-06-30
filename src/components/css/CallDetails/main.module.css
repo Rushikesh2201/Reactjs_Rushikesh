@@ -1,17 +1,29 @@
-
 .container {
-    flex: 1;
-    overflow-x : hidden;
-  }  
+  flex: 1;
+  overflow-x: hidden;
+}
 
 .tableDiv {
-    padding-bottom: 29em;
+  padding-bottom: 29em;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 100%;
   }
 
-@media(max-width :500px){
-    .tableDiv {
-        width: auto;
-        overflow-x: auto;
-        padding-bottom: 0em;
-      }
+  .tableDiv {
+    width: 100%;
+    padding-bottom: 0em;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+  .tableDiv {
+    width: 100%;
+    margin-left: 7em;
+  }
 }

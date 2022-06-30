@@ -1,36 +1,36 @@
-
-
 .container {
-    flex: 1;
-    overflow-x : hidden;
+  flex: 1;
+  overflow-x: hidden;
+}
+
+.container2 {
+  flex: 1;
+  background: #cccccc;
+  height: 64em;
+  width: 96%;
+  margin-right: 2em;
+  margin-left: 2.1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    overflow-x: hidden;
   }
 
   .container2 {
-    flex: 1;
-    background: #cccccc;
-    height: 63em;
-    width: 96%;
-    margin-right: 2em;
-    margin-left: 2.1em;
-    border-radius: 10px;
-    margin-bottom : 1em;
+    width: 94%;
+    height: 112em;
+    margin-left: 0.8em;
+    margin-right: 1em;
+    margin-bottom: 10px;
   }
-  @media screen and (max-width: 500px) {
-    .container {
-      overflow-x : hidden;
-    }
-    .container2 {
-        width: 94%;
-        height: 97em;
-        margin-left: 0.8em;
-        margin-right: 1em;
-        margin-bottom: 10px;
-      }
 }
 
-@media screen and (min-width : 501px) and (max-width : 1000px){
-  .container2{
-    width : 92.5%;
-    //overflow-x : scroll;
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  .container2 {
+    width: 92.5%;
+    height: 136em;
   }
 }

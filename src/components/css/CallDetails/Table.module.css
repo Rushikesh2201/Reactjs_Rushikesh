@@ -1,74 +1,155 @@
 .table {
-  padding-left: 3em;
+  margin-left: 3em;
+  width: 80%;
 }
 
 .tableHeading {
   height: 3em;
-  padding-right: 11em;
+  padding-left: 3em;
   border-bottom: 2px solid;
   border-color: gray;
+  align-items: center;
+  justify-content: center;
 }
 
 .tableHeading1 {
   height: 3em;
-  padding-right: 11em;
+  padding-right: 25em;
+  padding-left: 3em;
   border-bottom: 2px solid;
   border-color: gray;
+  align-items: center;
+  justify-content: center;
 }
 
 .tableBody {
-  padding: 2em;
-  margin: 10em;
+  align-items: center;
+  justify-content: center;
 }
 
 .tableData {
   border-bottom: 2px solid;
   height: 3em;
-  padding-left: 1em;
   border-color: gray;
+  align-items: center;
+  padding-left: 6em;
+  justify-content: center;
 }
 
 .tableData1 {
   border-bottom: 2px solid;
   height: 3em;
-  padding-left: 1em;
+  padding-left: 1.5em;
   border-color: gray;
+  padding-right: 3em;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .table {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tableHeading {
+    width: 5%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -3.5em;
+    justify-content: center;
+  }
+
+  .tableBody {
+    margin-left: -13em;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4em;
+  }
+
+  .tableData {
+    width: 130%;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -8.5em;
+  }
+
+  .tableData1 {
+    width: 70%;
+    height: 6em;
+    display: flex;
+    margin-left: 0.5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tableHeading1 {
+    width: 1%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3em;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   .table {
     display: flex;
     flex-direction: row;
   }
 
   .tableHeading {
-    width: 0%;
-    height: 2.4em;
+    width: 5%;
+    height: 3em;
     display: flex;
     flex-direction: row;
-  }
-
-  .tableBody {
-    margin-left: -7em;
-    width: 0%;
-    margin-top: -2em;
-  }
-  .tableData {
-    width: auto;
-    height: 2.4em;
-    display: flex;
-  }
-
-  .tableData1 {
-    width: auto;
-    height: 5.5em;
-    display: flex;
+    align-items: center;
+    margin-left: -3.8em;
+    justify-content: center;
+    margin-right: 10em;
   }
 
   .tableHeading1 {
-    width: 0%;
-    height: 5.5em;
+    width: 5%;
+    height: 6em;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: -3.6em;
+    margin-right: 11em;
+  }
+
+  .tableData {
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -9em;
+  }
+
+  .tableData1 {
+    width: 55%;
+    height: 6em;
+    display: flex;
+    margin-left: -1em;
+    align-items: center;
+    justify-content: center;
+    margin-right: -1em;
+  }
+
+  .tableBody {
+    margin-left: -13em;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
   }
 }

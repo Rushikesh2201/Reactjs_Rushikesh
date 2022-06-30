@@ -12,16 +12,18 @@
 }
 
 .TableContainer {
-  width : 100%;
-  margin-left : -.5em;
+  width: 100%;
+  margin-left: -0.5em;
 }
 
 .Table1column {
   font-size: 1em;
   padding-left: 5em;
   padding-right: 5em;
-  text-align: center;
+  align-items: center;
   border: 1px solid;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 .Table1Body {
@@ -29,13 +31,17 @@
 }
 
 .Table1Data {
-  text-align: center;
+  align-items: center;
   border: 1px solid;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 .Table1Data1 {
   text-align: center;
   border: 1px solid;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 .Table1column1 {
@@ -45,6 +51,8 @@
   text-align: center;
   align-items: center;
   background-color: #ff4000;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 
 @media screen and (max-width: 500px) {
@@ -57,7 +65,8 @@
   .TableContainer {
     width: auto;
     overflow-x: anywhere;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    align-items: center;
   }
 
   .campaign {
@@ -74,7 +83,6 @@
     display: flex;
     flex-direction: row;
     margin-left: 1em;
-    //overflow-x: anywhere;
     justify-content: center;
     align-items: center;
   }
@@ -95,12 +103,12 @@
     border: 1px solid;
     justify-content: center;
   }
+
   .Table1Data {
     width: 8em;
     height: 2.4em;
     display: flex;
     justify-content: center;
-    overflow-wrap: anywhere;
   }
 
   .Table1Data1 {
@@ -109,29 +117,77 @@
     display: flex;
     justify-content: center;
     overflow-wrap: anywhere;
+    align-items: center;
   }
+
   .Table1Body {
     margin-left: -5.2em;
   }
 }
 
-@media screen and (min-width : 501px) and (max-width : 1000px){
+@media screen and (min-width: 501px) and (max-width: 1000px) {
   .TableContainer {
-    overflow-x : scroll;
-    width : 96%;
-   margin-top : -1em;
-
+    width: 96%;
+    margin-top: -1em;
   }
 
-  .Table1{
-   width : 200%;
+  .Table1 {
+    width: 200%;
+    display: flex;
+    flex-direction: row;
+    margin-left: -24em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Table1column {
+    height: 2.4em;
+    display: flex;
+    width: 23%;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 2.3em;
+    font-size: 1.1em;
+  }
+
+  .Table1column1 {
+    height: 3.3em;
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    border: 1px solid;
+    justify-content: center;
+    font-size: 1.1em;
+  }
+
+  .Table1Data {
+    width: 14em;
+    height: 2.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+  }
+
+  .Table1Data1 {
+    width: 14em;
+    height: 3.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+  }
+
+  .Table1Body {
+    margin-left: -5.2em;
   }
 
   .campaign {
-    margin-bottom: 4px;
-    /* font-size: 1.7em;
+    margin-bottom: 0.5em;
+    font-size: 1.7em;
     font-family: arial;
-    padding-left: 1.5em;
-    margin-bottom: 2px; */
+    padding-left: 1.4em;
+    padding-right: 3em;
+    width: 67%;
   }
 }
