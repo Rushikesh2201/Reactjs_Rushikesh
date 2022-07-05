@@ -49,7 +49,7 @@
 @media screen and (min-width: 821px) and (max-width: 912px) {
   .container2 {
     width: 93%;
-    height: 120em;
+    height: 135em;
   }
 }
 
@@ -62,7 +62,24 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1280px) {
-  .container {
+  .container2 {
     height: 88em;
   }
 }
+
+@media (max-width : 300px){
+  .container2{
+    height : 89em;
+  }
+}
+
+/* ipad Air
+Nest Hub Max
+Iphone XR
+samsung galaxy ultra s20
+Ipad mini
+surface pro7
+samsu galaxy A51
+Nest Hiub
+Ipad pro
+Pixel 5 */

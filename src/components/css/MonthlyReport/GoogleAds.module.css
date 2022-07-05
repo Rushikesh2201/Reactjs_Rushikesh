@@ -70,14 +70,21 @@
   }
 }
 
-@media screen and (min-width: 913px) and (max-width: 1024px) {
+@media screen and (min-width: 913px) and (max-width: 1023px) {
   .App2 {
-    width: 95%;
+    width: 93%;
+    margin-left : 2em;
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
   .App2 {
     width: 95.7%;
+  }
+}
+
+@media (max-width : 300px){
+  .App2{
+    width : 87%;
   }
 }
