@@ -3,6 +3,10 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
 import styles from "./css/index.module.css";
+import ApiService from '../../../utils/ApiService';
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { setUser, resetUser } from "./../../../utils/actions";
 export class Dashboard extends Component {
   constructor() {
     super();
@@ -161,6 +165,23 @@ export class Dashboard extends Component {
     };
 
   }
+  componentDidMount() {
+    console.log(this.props.user)
+    let payload = {
+      customer_id: 4422361780,
+      from_date: '2022-06-24T00:00:00',
+      to_date: '2022-06-30T00:00:00'
+    };
+    let header = { Token: this.props.user.userInfo.token }
+    ApiService.get("/v1/getCampaigns", payload, header, (res, err) => {
+      if (err == null) {
+        console.log(res)
+      } else {
+        console.log(err);
+
+      }
+    });
+  }
 
   render() {
     return (
@@ -202,7 +223,7 @@ export class Dashboard extends Component {
                   </tr>
                 </thead>
                 {this.state.data.map((rowdata, i) => (
-                  <tbody className={styles.CampaignGroupTableBody}  key={`data_${i}`}>
+                  <tbody className={styles.CampaignGroupTableBody} key={`data_${i}`}>
                     <tr>
                       <td className={styles.RowStyle}>{rowdata.CAMPAIGN}</td>
                       <td className={styles.RowStyle}>{rowdata.CLICKS}</td>
@@ -241,7 +262,7 @@ export class Dashboard extends Component {
                 </thead>
 
                 {this.state.data1.map((rowdata, i) => (
-                  <tbody className={styles.CampaignGroupTableBody}  key={`data1_${i}`}>
+                  <tbody className={styles.CampaignGroupTableBody} key={`data1_${i}`}>
                     <tr>
                       <td className={styles.RowStyle}>{rowdata.CAMPAIGN}</td>
                       <td className={styles.RowStyle}>{rowdata.CLICKS}</td>
@@ -280,7 +301,7 @@ export class Dashboard extends Component {
                 </thead>
 
                 {this.state.data2.map((rowdata, i) => (
-                  <tbody className={styles.CampaignGroupTableBody}  key={`data2_${i}`}>
+                  <tbody className={styles.CampaignGroupTableBody} key={`data2_${i}`}>
                     <tr>
                       <td className={styles.RowStyle}>{rowdata.CAMPAIGN}</td>
                       <td className={styles.RowStyle}>{rowdata.CLICKS}</td>
@@ -344,7 +365,7 @@ export class Dashboard extends Component {
                 </thead>
 
                 {this.state.data3.map((rowdata, i) => (
-                  <tbody className={styles.table2body}  key={`data3_${i}`}>
+                  <tbody className={styles.table2body} key={`data3_${i}`}>
                     <tr>
                       <td className={styles.RowStyle1}>{rowdata.name}</td>
                       <td className={styles.RowStyle1}>{rowdata.position}</td>
@@ -365,7 +386,7 @@ export class Dashboard extends Component {
                   </tr>
                 </thead>
                 {this.state.data4.map((rowdata, i) => (
-                  <tbody className={styles.table2body}  key={`data4_${i}`}>
+                  <tbody className={styles.table2body} key={`data4_${i}`}>
                     <tr>
                       <td className={styles.RowStyle1}>{rowdata.name}</td>
                       <td className={styles.RowStyle1}>{rowdata.position}</td>
@@ -445,7 +466,7 @@ export class Dashboard extends Component {
                   </tr>
                 </thead>
                 {this.state.data6.map((rowdata, i) => (
-                  <tbody className={styles.table2body}  key={`data6_${i}`}>
+                  <tbody className={styles.table2body} key={`data6_${i}`}>
                     <tr>
                       <td className={styles.RowStyle1}>{rowdata.name}</td>
                       <td className={styles.RowStyle1}>{rowdata.position}</td>
@@ -462,4 +483,7 @@ export class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default connect((state) => ({ user: state.user }), {
+  setUser,
+  resetUser,
+})(withRouter(Dashboard));

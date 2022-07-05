@@ -2,7 +2,7 @@ const hostname = window && window.location && window.location.hostname;
 
 let backendHost = {
   getAPIUrl: () => {
-   return 'http://localhost:8080/api'
+   return 'http://localhost:8081/api'
   },
 };
 export { backendHost };

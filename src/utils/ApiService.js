@@ -11,7 +11,7 @@ let ApiService = {
           headers === null
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {
@@ -41,7 +41,7 @@ let ApiService = {
           (headers === null || Object.keys(headers).length === 0)
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {
@@ -69,7 +69,7 @@ let ApiService = {
           (headers === null || Object.keys(headers).length === 0)
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {
@@ -92,7 +92,7 @@ let ApiService = {
           (headers === null || Object.keys(headers).length === 0)
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {
@@ -116,7 +116,7 @@ let ApiService = {
           (headers === null || Object.keys(headers).length === 0)
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {
@@ -143,7 +143,7 @@ let ApiService = {
           (headers === null || Object.keys(headers).length === 0)
             ? {}
             : {
-              Authorization: `Token ${headers.Token}`,
+              Authorization: `${headers.Token}`,
             },
       })
       .then((responseData) => {

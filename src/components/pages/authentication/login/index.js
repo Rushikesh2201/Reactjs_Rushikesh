@@ -31,7 +31,7 @@ const Login = (props) => {
       email: uname.value,
       password: pass.value,
     };
-    ApiService.post("/login", payload, null, (res, err) => {
+    ApiService.post("/v1/login", payload, null, (res, err) => {
       if (err == null) {
         props.setUser({
           userInfo: res,
