@@ -13,7 +13,7 @@ import { persistor, store } from "../../utils/store";
 global.navigate = null;
 
 const Login = lazy(() => import("../pages/authentication/login"));
-const Dashboard = lazy(() => import("../pages/Dashboard"));
+const Dashboard = lazy(() => import("../pages/Dashboard/main"));
 
 const NoMatchPage = () => {
   document.body.style.height = "100%";

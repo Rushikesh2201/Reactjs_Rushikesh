@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #8189b0;
+  overflow-y: auto !important;
 }
 
 p {
