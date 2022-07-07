@@ -5,7 +5,7 @@ import ApiService from '../../../utils/ApiService';
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
-
+import moment from "moment";
 
 import Header from "./Header";
 import GoogleAds from "./GoogleAds";
@@ -24,11 +24,11 @@ export class Dashboard extends Component {
 
   }
   componentDidMount() {
-    console.log(this.props.user)
+    console.log(this.props.user, moment().subtract(30, 'days').format('YYYY-MM-DDT00:00:00'))
     let payload = {
       customer_id: 4422361780,
-      from_date: '2022-06-24T00:00:00',
-      to_date: '2022-06-30T00:00:00'
+      from_date: moment().subtract(30, 'days').format('YYYY-MM-DDT00:00:00'),
+      to_date: moment().format('YYYY-MM-DDT00:00:00')
     };
     let header = { Token: this.props.user.userInfo.token }
     ApiService.get("/v1/getCampaigns", payload, header, (res, err) => {
@@ -49,7 +49,7 @@ export class Dashboard extends Component {
         <div className={Styles.App}>
           <Header
             heading="Monthly Report"
-            title="Tobey Harris - Heath's Auto"
+            title="Aero Auto Repair San Diego"
             leads="Leads Near Me"
           />
 
