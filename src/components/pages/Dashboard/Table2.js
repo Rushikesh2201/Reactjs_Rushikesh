@@ -51,6 +51,7 @@ function Table2(props) {
           <FontAwesomeIcon
             icon={faMagnifyingGlassChart}
             size="10x"
+            className = {Styles.Icon}
           />
           <h2 className={Styles.Local}>{props.heading}</h2>
         </div>

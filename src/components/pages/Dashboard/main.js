@@ -1,4 +1,3 @@
-// import "../../core/App.css";
 import React, { Component } from "react";
 import Styles from "./css/main.module.css";
 import ApiService from '../../../utils/ApiService';
@@ -17,14 +16,11 @@ import CallDetailsLink from "./CallDetailsLink";
 export class Dashboard extends Component {
   constructor() {
     super();
-
     this.state = {
       campaignsData: []
     };
-
   }
   componentDidMount() {
-    console.log(this.props.user, moment().subtract(30, 'days').format('YYYY-MM-DDT00:00:00'))
     let payload = {
       customer_id: 4422361780,
       from_date: moment().subtract(30, 'days').format('YYYY-MM-DDT00:00:00'),
@@ -56,9 +52,7 @@ export class Dashboard extends Component {
           <GoogleAds ads="Google Ads" duration="Previous 30 days" />
 
           <div className={Styles.MainContiner}>
-            <Table
-              data={this.state.campaignsData}
-            />
+            <Table data={this.state.campaignsData} />
           </div>
           <div className={Styles.container2}>
             <Tags
@@ -181,7 +175,7 @@ export class Dashboard extends Component {
                 ]}
               />
             </div>
-            <CallDetailsLink />
+            {/* <CallDetailsLink /> */}
           </div>
         </div>
       </div>
