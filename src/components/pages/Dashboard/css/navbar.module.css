@@ -1,0 +1,755 @@
+.nav_container {
+  position: relative;
+  margin-top: 0.5em;
+  align-items: center;
+  margin-bottom: -1.5em;
+}
+
+.img {
+  padding-left: 0.5em;
+  position: relative;
+  right: 15em;
+}
+
+.dropdown_nav {
+  position: absolute;
+  right: 4.5em;
+  font-size: 0.8em;
+}
+
+.Icon {
+  position: absolute;
+  top: 0.8em;
+  right: 1.5em;
+}
+
+.Home_nav {
+  position: absolute;
+  right: 3.6em;
+}
+
+.homeLink {
+  text-decoration: none;
+  color: black;
+}
+
+.leadsText {
+  color: black;
+  font-size: 0.8em;
+  padding-left: 2em;
+  text-decoration: none;
+  position: absolute;
+  left: 6em;
+}
+
+.dropdown_content {
+  display: block;
+  flex-direction : center;
+  /* float: none; */
+  color: black;
+  padding: 2px 2px;
+  text-decoration: none;
+}
+
+.link_dropdown {
+  text-decoration: none;
+  color: black;
+  padding: 4px 4px;
+  margin-left: 1em;
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+.dropdown{
+}
+
+@media screen and (min-width: 280px) and (max-width: 359px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 2em;
+    top: 1.8em;
+    font-size: 0.6em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 2.5em;
+    top: 0.5em;
+  }
+
+  .img {
+    width: 8%;
+    position: relative;
+    left: -0.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .leadsText {
+    padding-left: 3em;
+    position: absolute;
+    left: 2em;
+    top: 0.5em;
+    font-size: 0.5em;
+  }
+
+.nav_container{
+
+}
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: .1em;
+    top: 2em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 23.5em;
+    top : 1.2em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 22em;
+    top: -1.5em;
+    font-size : 1em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    right : 22.5em;
+    top : .3em;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 375px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 1em;
+    top: 1.5em;
+    font-size: 0.7em;
+  }
+
+  .leadsText {
+    color: black;
+    font-size: 0.6em;
+    text-decoration: none;
+    margin-bottom: 0.5em;
+    position: absolute;
+    left: 3em;
+  }
+
+  .img {
+    width: 8%;
+    position: relative;
+    left: -0.1em;
+    margin-bottom: 0.5em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  .nav_container{
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    right: .5em;
+    top: 2.3em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 27.5em;
+    top : 1.2em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 26em;
+    top: -1.5em;
+    font-size : 1em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    right : 26.5em;
+    top : .5em;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 393px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 2.3em;
+    top: 2em;
+    font-size: 0.7em;
+  }
+
+  .leadsText {
+    color: black;
+    font-size: 0.6em;
+    padding-left: 1em;
+    text-decoration: none;
+    position: absolute;
+    left: 4em;
+  }
+
+  .img {
+    width: 8%;
+    position: relative;
+    right: -0.1em;
+    margin-bottom: 0.4em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 3em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: .4em;
+    top: 2.5em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 29em;
+    top : 1.2em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 27.5em;
+    top: -1.5em;
+    font-size : 1em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    right : 28em;
+    top : .5em;
+  }
+}
+
+@media screen and (min-width: 394px) and (max-width: 414px) {
+  .leadsText {
+    color: black;
+    font-size: 0.6em;
+    padding-left: 1em;
+    text-decoration: none;
+    position: absolute;
+    left: 4em;
+  }
+
+  .img {
+    width: 8%;
+    position: relative;
+    right: -0.1em;
+    margin-bottom: 0.4em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 3em;
+  }
+
+  .dropdown_nav {
+    position: absolute;
+    right: 2.3em;
+    top: 1.4em;
+    font-size: 0.7em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: .5em;
+    top: 2.5em;
+  }
+
+  /* .Home_nav {
+    position: absolute;
+    right: 3.5em;
+    bottom: 0.1em;
+  } */
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 30.5em;
+    top : 1.2em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 29em;
+    top: -1.5em;
+    font-size : 1em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    right : 29.5em;
+    top : .5em;
+  }
+
+}
+
+@media screen and (min-width: 415px) and (max-width: 540px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 2.3em;
+    top:2em;
+    font-size: 0.7em;
+  }
+
+  .leadsText {
+    color: black;
+    font-size: 0.7em;
+    padding-left: 1em;
+    text-decoration: none;
+    position: absolute;
+    left: 3.5em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: -0.1em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 0.5rem;
+    right: 3em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: .5em;
+    top: 2.3em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 41.5em;
+    top : 1.2em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 40em;
+    top: -1.5em;
+    font-size : 1em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    right : 40.5em;
+    top : .5em;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 600px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 2.6em;
+    top: 1em;
+    font-size: 0.8em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 1rem;
+    right: 2em;
+  }
+
+  .img {
+    width: 8%;
+    position: relative;
+    right: 1.5em;
+  }
+
+  .leadsText {
+    padding-left: 2em;
+    position: absolute;
+    left: 3em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: 1em;
+    top: 3.5em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 26.5em;
+    top : 2.1em;
+    font-size : 1.5em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 25em;
+    top: -.2em;
+    font-size : 1.5em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    left : -19.6em;
+    top : 1em;
+    font-size : 2em;
+  }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    font-size: 0.8em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 1rem;
+    right: 2em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: 1em;
+  }
+
+  .leadsText {
+    padding-left: 2em;
+    position: absolute;
+    left: 2.5em;
+    font-size: 1em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: .8em;
+    top: 3.3em;
+  }
+ 
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 34.5em;
+    top : 2.1em;
+    font-size : 1.5em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 33em;
+    top: -.2em;
+    font-size : 1.5em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    left : -25.5em;
+    top : 1em;
+    font-size : 2em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 820px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    font-size: 0.8em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 1rem;
+    right: 2em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: 1.5em;
+  }
+
+  .leadsText {
+    padding-left: 2em;
+    position: absolute;
+    left: 3.5em;
+    font-size: 1em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: 1.6em;
+    top: 3.3em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 35.8em;
+    top : 2.3em;
+    font-size : 1.5em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 30em;
+    top: -.2em;
+    font-size : 1.7em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    left : -26.6em;
+    top : 1.2em;
+    font-size : 2em;
+  }
+
+}
+
+@media screen and (min-width: 821px) and (max-width: 912px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 3em;
+    top: 0.7em;
+    font-size: 01.1em;
+  }
+
+  .responsive_navbar_nav {
+    position: absolute;
+    font-size: 1rem;
+    right: 2em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: 5em;
+  }
+
+  .leadsText {
+    padding-left: 2em;
+    position: absolute;
+    left: 2em;
+    font-size: 1.3em;
+  }
+
+  .collaps_nav {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    background-color: white;
+    position: absolute;
+    right: 1em;
+    top: 3.5em;
+  }
+
+  .dropdown_content {
+    display: flex;
+    justify-content : flex-start;
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 29em;
+    top : 2.3em;
+    font-size : 1.5em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    right: 24em;
+    top: -.2em;
+    font-size : 1.7em;
+  }
+
+  #basic-nav-dropdown{
+    position : absolute;
+    left : -21.5em;
+    top : 1.2em;
+    font-size : 2em;
+  }
+}
+
+@media screen and (min-width: 913px) and (max-width: 1024px) {
+  .dropdown_nav {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    font-size: 01em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: 1.7em;
+  }
+
+  .leadsText {
+    padding-left: 2em;
+    position: absolute;
+    left: 2em;
+    font-size: 1.3em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    top: 0.1em;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 1.5em;
+    top: 0.7em;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .dropdown_nav {
+    display: block;
+    position: absolute;
+    right: 3.5em;
+    top: 1.5em;
+    font-size: 01em;
+  }
+
+  .img {
+    width: 6%;
+    position: relative;
+    right: 4em;
+  }
+
+  .leadsText {
+    padding-left: 2.5em;
+    position: absolute;
+    left: 2em;
+    font-size: 1.3em;
+  }
+
+  .Home_nav {
+    position: absolute;
+    top: 0.1em;
+  }
+
+  .Icon {
+    position: absolute;
+    right: 1.5em;
+    top: 0.7em;
+  }
+}
