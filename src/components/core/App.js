@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import "./App.css";
+import 'rsuite/dist/rsuite.min.css';
 import Spinner from "react-bootstrap/Spinner";
 
 // import PrivateRoute from "./PrivateRoute";

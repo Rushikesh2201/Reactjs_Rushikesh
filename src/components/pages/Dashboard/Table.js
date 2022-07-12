@@ -29,7 +29,7 @@ function Table(props) {
               <td className={Styles.Table1Data}>{rowdata.impressions}</td>
               <td className={Styles.Table1Data}>{Number(rowdata.ctr).toFixed(2)}</td>
               <td className={Styles.Table1Data}>{rowdata.average_cpc}</td>
-              <td className={Styles.Table1Data}>{rowdata.cost}</td>
+              <td className={Styles.Table1Data}>${rowdata.cost.toFixed(2)}</td>
             </tr>
           </tbody>
         ))}

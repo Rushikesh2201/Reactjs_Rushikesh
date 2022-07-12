@@ -1,20 +1,9 @@
 .App2 {
-  min-height: 8vh;
-  margin-top: 2em;
-  margin-right: 2em;
-  margin-left: 1.5em;
-  display: flex;
-  flex-direction: column;
-  border: none !important;
-  border-width: 96%;
-  width: 97%;
-  justify-content: center;
 }
 
 .Ads {
   font-size: 3em;
   font-family: arial;
-  padding-left: 0.5em;
 }
 
 .AdText {
@@ -53,9 +42,7 @@
   }
 
   .Ads {
-    margin-left: -1em;
-    margin-top: 0.4em;
-    /* font-size: 2em; */
+    font-size: 2em;
   }
 
   .AdText {
@@ -72,12 +59,6 @@
     margin-left: 1.6em;
   }
 
-  .Ads {
-    margin-top: 0.5em;
-    /* padding-left: 1em; */
-    display: flex;
-    flex-direction: row;
-  }
 
   .AdText {
     /* padding-left: 1.8em; */
@@ -115,15 +96,6 @@
     margin-top: 0.8em;
     width: 91%;
   }
-  .Ads {
-    margin-top: 0.5em;
-    /* padding-left: 1em; */
-    display: flex;
-    flex-direction: row;
-    font-size: 2em;
-    margin-left: -0.1em;
-    margin-bottom: -0.1em;
-  }
 
   .AdText {
     margin-left: -0.1em;
@@ -154,15 +126,12 @@
 
   .Ads {
     font-size: 2em;
-    margin-left: -0.1em;
   }
 }
 
 @media screen and (max-width: 912px) {
   .Ads {
     font-size: 2.5em;
-    margin-left: -0.1em;
-    margin-top: 0.7em;
   }
 
   .AdText {
@@ -180,8 +149,6 @@
 
   .Ads {
     font-size: 2.2em;
-    margin-left: -0.1em;
-    margin-top: 0.7em;
   }
 
   .AdText {
@@ -200,8 +167,6 @@
 
   .Ads {
     font-size: 1.5em;
-    margin-left: -0.1em;
-    margin-top: 0.7em;
   }
 
   .AdText {
@@ -220,8 +185,6 @@
 
   .Ads {
     font-size: 1.5em;
-    margin-left: -0.1em;
-    margin-top: 0.8em;
   }
 
   .AdText {

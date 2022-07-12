@@ -2,6 +2,8 @@
   flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100%;
+  background-color: #ebebeb !important;
 }
 
 .container2 {
@@ -9,9 +11,9 @@
   background: #cccccc;
   /* height: 64em; */
   overflow-y: auto;
-  width: 96%;
-  margin-right: 2em;
-  margin-left: 2.1em;
+  /* width: 96%; */
+  /* margin-right: 2em;
+  margin-left: 2.1em; */
   border-radius: 10px;
   margin-bottom: 1em;
 }
@@ -50,4 +52,48 @@
   .container2 {
     margin-left: 1em;
   }
+}
+
+.datePickerStyle {
+  width: 520px;
+}
+
+hr.style4 {
+  border-top: 1px dotted #8c8b8b;
+}
+
+hr {
+  margin: 0.2rem 0 !important;
+
+}
+
+.cardStyle {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #fff;
+  margin: 10px;
+  padding: 25px;
+  line-height: 2;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 5px;
+  border-bottom: 9px solid #ee5135;
+}
+
+.cardsOuter div:first-child .cardStyle {
+  margin-left: 0px !important;
+}
+
+.cardsOuter div:last-child .cardStyle {
+  margin-right: 0px !important;
+}
+
+.cardCount {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+
 }
