@@ -19,10 +19,10 @@ const Ranges = [
 ];
 
 const CustomDateRangePicker = (props) => {
-{console.log(props)}
-    return (<DateRangePicker showOneCalendar placeholder="Default" size="lg" value={props.filterDateRange} onOk={(e) => { props.onChangeDateFilter(e) }}
-        ranges={Ranges} cleanable={false} placement='auto' disabledDate={date => moment().isBefore(date, subDays(new Date(), 1))} 
-        className={[...props.className].join(" ")}/>
+    return (
+        <DateRangePicker  placeholder="Default" size="lg" value={props.filterDateRange} onOk={(e) => { props.onChangeDateFilter(e) }}
+            ranges={Ranges} cleanable={false} placement='auto' disabledDate={date => moment().isBefore(date, subDays(new Date(), 1))}
+            className={[...props.className].join(" ")} />
     )
 }
 

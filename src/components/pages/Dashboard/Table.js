@@ -6,7 +6,6 @@ function Table(props) {
     <>
     {Object.keys(props.data).length > 0 && props.data.results.length > 0 && (
     <div className={Styles.TableContainer}>
-      {console.log(props)}
       <h3 className={Styles.campaign}>Campaign group: Aero Auto Repair San Diego </h3>
 
       <table className={Styles.Table1}>
@@ -22,13 +21,12 @@ function Table(props) {
         </thead>
         {props.data.results.map((rowdata, i) => (
           <tbody className={Styles.Table1Body} key={`${i}_table`}>
-            {console.log(rowdata)}
             <tr>
               <td className={Styles.Table1Data}>{rowdata.name[0]}</td>
               <td className={Styles.Table1Data}>{rowdata.clicks}</td>
               <td className={Styles.Table1Data}>{rowdata.impressions}</td>
               <td className={Styles.Table1Data}>{Number(rowdata.ctr).toFixed(2)}</td>
-              <td className={Styles.Table1Data}>{rowdata.average_cpc}</td>
+              <td className={Styles.Table1Data}>${rowdata.average_cpc.toFixed(2)}</td>
               <td className={Styles.Table1Data}>${rowdata.cost.toFixed(2)}</td>
             </tr>
           </tbody>

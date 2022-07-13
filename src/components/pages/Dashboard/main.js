@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
 import moment from "moment";
 
-import Header from "./Header";
+import Header from "../../common/Header";
 import CustomTitleH1 from "./CustomTitleH1";
 import Table from "./Table";
 // import Tags from "./Tags";
@@ -41,7 +41,6 @@ export class Dashboard extends Component {
     let header = { Token: this.props.user.userInfo.token }
     ApiService.get("/v1/getCampaigns", payload, header, (res, err) => {
       if (err == null) {
-        console.log(res)
         cardsData.forEach((itm) => {
           if (itm.name === 'Total Campaigns') {
             itm.value = res.count
@@ -70,12 +69,11 @@ export class Dashboard extends Component {
   render() {
     return (
       <>
-        <Header
-          heading="Monthly Report"
-          title="Aero Auto Repair San Diego"
-          leads="Leads Near Me"
-        />
+        <Header />
+
         <div className={[Styles.container, 'container-fluid'].join(" ")}>
+
+
           <div className={Styles.App}>
 
 
@@ -87,8 +85,9 @@ export class Dashboard extends Component {
             <hr className="style4" />
 
             <div className={["col-md-12 col-sm-12 d-flex flex-wrap p-0", Styles.cardsOuter].join(" ")}>
-              {this.state.cardsData.map((itm) => {
-                return (<div className={["col-md-3 col-sm-12 p-0"].join(" ")}>
+              {this.state.cardsData.map((itm, i) => {
+                return (
+                <div className={["col-md-3 col-sm-12 p-0"].join(" ")} key={`${i}_cards`}>
                   <div className={[Styles.cardStyle].join(" ")}>
                     <span className={Styles.cardCount}>{itm.value}</span>
                     <span className={Styles.cardTitle}>{itm.name}</span>

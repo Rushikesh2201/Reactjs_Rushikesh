@@ -4,6 +4,7 @@
   overflow-y: auto;
   width: 100%;
   background-color: #ebebeb !important;
+  /* margin-top: 80px; */
 }
 
 .container2 {
@@ -75,7 +76,7 @@ hr {
   margin: 10px;
   padding: 25px;
   line-height: 2;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 5px;
   border-bottom: 9px solid #ee5135;
 }

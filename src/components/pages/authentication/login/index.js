@@ -10,14 +10,14 @@ import Logo from "./../../../../assets/svg/logo.png";
 import ApiService from "../../../../utils/ApiService";
 const Login = (props) => {
   let history = useHistory();
-  let model = {
-    email: "",
-    password: "",
-  };
+  // let model = {
+  //   email: "",
+  //   password: "",
+  // };
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [intialModel, setIntialModel] = useState(model);
+  // const [intialModel, setIntialModel] = useState(model);
 
 
 
@@ -75,7 +75,7 @@ const Login = (props) => {
 
       <div className={styles.loginForm}>
         <div className={styles.title}>Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+        {renderForm}
       </div>
     </div>
   );

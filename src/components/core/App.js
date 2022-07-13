@@ -15,6 +15,8 @@ global.navigate = null;
 
 const Login = lazy(() => import("../pages/authentication/login"));
 const Dashboard = lazy(() => import("../pages/Dashboard/main"));
+const Profile = lazy(() => import("../pages/profile"));
+
 
 const NoMatchPage = () => {
   document.body.style.height = "100%";
@@ -47,6 +49,7 @@ function App() {
                   <Switch>
                     <Route exact restricted path="/" component={Login} />
                     <Route  path="/dashboard" component={Dashboard} />
+                    <Route  path="/profile" component={Profile} />
 
                     <Route component={NoMatchPage} />
                   </Switch>
