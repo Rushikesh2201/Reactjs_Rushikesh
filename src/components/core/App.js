@@ -42,6 +42,7 @@ function App() {
                         className={"spinner"}
                         animation="grow"
                         variant={"info"}
+                        
                       />
                     </div>
                   }
