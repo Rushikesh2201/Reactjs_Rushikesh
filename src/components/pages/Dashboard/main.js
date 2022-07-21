@@ -13,18 +13,21 @@ import Table from "./Table";
 // import Table2 from "./Table2";
 import { startOfDay, endOfDay, addDays, subDays } from 'date-fns';
 import { CustomDateRangePicker } from "../../common/CustomDateRangePicker"
+import Table2 from "./Table2";
 export class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
       loading: false,
       campaignsData: [],
+      adGroupData:[],
       filterDateRange: [startOfDay(subDays(new Date(), 31)), endOfDay(addDays(new Date(), -1))],
       cardsData: [{ name: 'Total Campaigns', value: 0 }, { name: 'Total Clicks', value: 0 }, { name: 'Total Impressions', value: 0 }, { name: 'Total Cost', value: 0 }]
     };
   }
   componentDidMount() {
     this.getCampaignsData();
+    this.getAdGroupsData();
   }
   onChangeDateFilter = (e) => {
     this.setState({ filterDateRange: [moment(e[0]).toDate(), moment(e[1]).toDate()] }, () => {
@@ -66,6 +69,23 @@ export class Dashboard extends Component {
     });
   }
 
+  getAdGroupsData = () => {
+    let payload = {
+      customer_id: 4422361780,
+      from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
+      to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
+    };
+    let header = { Token: this.props.user.userInfo.token }
+    ApiService.get("/v1/getAdsGroups", payload, header, (res, err) => {
+      if (err == null) {
+        this.setState({ adGroupData: res, })
+      } else {
+        console.log(err);
+
+      }
+    });
+  }
+
   render() {
     return (
       <>
@@ -97,6 +117,10 @@ export class Dashboard extends Component {
             </div>
             <div className={Styles.MainContiner}>
               <Table data={this.state.campaignsData} />
+            </div>
+
+            <div className={Styles.MainContiner}>
+              <Table2 data={this.state.adGroupData} />
             </div>
             {/* <div className={[Styles.container2, 'col-md-12 col-sm-12'].join(" ")}>
               <Tags

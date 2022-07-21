@@ -25,10 +25,10 @@ let ApiService = {
             window.location.replace("/");
             return;
           }
-          if (error.response.data.detail !== "Not found.") {
-            alert(error.response.data.detail);
-            global.navigate("/");
-          }
+          // if (error.response.data.detail !== "Not found.") {
+          //   alert(error.response.data.detail);
+          //   global.navigate("/");
+          // }
           callback && callback(null, error.response.data);
         }
       });
