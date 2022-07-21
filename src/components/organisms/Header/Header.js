@@ -1,17 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRegistered } from "@fortawesome/free-solid-svg-icons";
-import Styles from "./css/Header.module.css";
+import Styles from "./Header.module.css";
 // import Navbar from './navbar';
 
 function Header(props) {
   return (
-    <header className={Styles.header}>
+    <header className= "" id = {Styles["header"]}>
       <h1 className={Styles.Title}>{props.heading} </h1>
       <small className={Styles.smallText}>{props.title}</small>
-      {/* <Navbar /> */}
       <div className={Styles.TextLead}>
-
         <h1 className={Styles.LeadTextH1}>
           {props.leads}
           <FontAwesomeIcon
@@ -19,7 +17,7 @@ function Header(props) {
             className={Styles.IconRegistered}
             size="xs"
           />
-        </h1> 
+        </h1>
       </div>
     </header>
   );

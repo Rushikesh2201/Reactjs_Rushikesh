@@ -1,7 +1,8 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
-import Styles from "./css/Table2.module.css";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
+import Styles from "./Table2.module.css";
+import Icon from "../../atoms/Icon/SEOIcon"
 
 function Table2(props) {
   return (
@@ -48,11 +49,13 @@ function Table2(props) {
       </div>
       <div className={Styles.Content}>
         <div className={Styles.MainContent1}>
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faMagnifyingGlassChart}
             size="10x"
             className = {Styles.Icon}
-          />
+          /> */}
+
+          <Icon />
           <h2 className={Styles.Local}>{props.heading}</h2>
         </div>
       </div>

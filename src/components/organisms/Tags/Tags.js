@@ -1,16 +1,19 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
-import Styles from "./css/Tags.module.css";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
+import Styles from "./Tags.module.css";
+import Icon from "../../atoms/Icon/SEOIcon"
 
 function Tags(props) {
   return (
     <div className={Styles.MainContent}>
-      <FontAwesomeIcon
+      {/* <FontAwesomeIcon
         icon={faMagnifyingGlassChart}
         size="10x"
         className = {Styles.Icon}
-      />
+      /> */}
+
+      <Icon />
       <h2 className={Styles.Local}>
         {props.heading}
       </h2>

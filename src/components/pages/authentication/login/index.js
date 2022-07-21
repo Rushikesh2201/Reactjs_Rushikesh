@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { setUser, resetUser } from "./../../../../utils/actions";
+import { setUser, resetUser } from "../../../../utils/actions";
 import { useHistory } from "react-router-dom";
 
 import styles from "./index.module.css";
-import Logo from "./../../../../assets/svg/logo.png";
+import Logo from "../../../../assets/svg/logo.png";
 import ApiService from "../../../../utils/ApiService";
 const Login = (props) => {
   let history = useHistory();

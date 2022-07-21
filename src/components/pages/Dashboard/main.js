@@ -1,18 +1,18 @@
 // import "../../core/App.css";
 import React, { Component } from "react";
-import Styles from "./css/main.module.css";
+import Styles from "./main.module.css";
 //import ApiService from '../../../utils/ApiService';
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { setUser, resetUser } from "./../../../utils/actions";
+import { setUser, resetUser } from "../../../utils/actions";
 
-import Header from "./Header";
-import Navbar from "./navbar";
-import GoogleAds from "./GoogleAds";
-import Table from "./Table";
-import Tags from "./Tags";
-import Table2 from "./Table2";
-import CallDetailsLink from "./CallDetailsLink";
+import Header from "../../organisms/Header/Header";
+import Navbar from "../../organisms/Navbar/navbar";
+import GoogleAds from "../../organisms/GoogleAds/GoogleAds";
+import Table from "../../organisms/TableCampaign/Table";
+import Tags from "../../organisms/Tags/Tags";
+import Table2 from "../../organisms/TableSEO/Table2";
+import CallDetailsLink from "../../organisms/CallDetailsLink/CallDetailsLink";
 
 export class Dashboard extends Component {
   constructor() {

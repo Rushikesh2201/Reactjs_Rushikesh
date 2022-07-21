@@ -12,6 +12,7 @@
   margin-top: 1em;
   margin-bottom: 2em;
 }
+
 .Table1 {
   width: 96%;
   height: 15em;
@@ -32,14 +33,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  //background-color: #000000;
-  /* color: b; */
   border: 1px solid;
 }
 
 .Table1Data {
   text-align: center;
-  /* margin-left : -1em; */
   border: 1px solid;
 }
 
@@ -51,9 +49,7 @@
   padding-bottom: 0.6em;
   padding-left: 2em;
   text-align: center;
-  /* margin-left : 4em; */
   padding-right: 2em;
-  /* border : .1px solid; */
 }
 
 .Table1Body {
@@ -65,7 +61,6 @@
   .Table1 {
     font-size: 0.4em;
     margin-left: 0.9em;
-    /* width : 100%; */
   }
 
   .campaign {
@@ -142,7 +137,7 @@
   }
 }
 
-@media screen and (min-width : 913px) and (max-width : 1024px){
+@media screen and (min-width: 913px) and (max-width: 1024px) {
   .campaign {
     margin-left: -1em;
   }
@@ -153,7 +148,7 @@
   }
 }
 
-@media screen and (min-width : 1025px) and (max-width : 1280px){
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
   .campaign {
     margin-left: -1em;
   }
@@ -163,5 +158,3 @@
     margin-left: 1.4em;
   }
 }
-
-

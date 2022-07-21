@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Styles from './css/GoogleAds.module.css'
+import Styles from './GoogleAds.module.css'
 
 function GoogleAds(props){
     return(
