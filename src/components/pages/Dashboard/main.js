@@ -20,7 +20,7 @@ export class Dashboard extends Component {
     this.state = {
       loading: false,
       campaignsData: [],
-      adGroupData:[],
+      adGroupData: [],
       filterDateRange: [startOfDay(subDays(new Date(), 31)), endOfDay(addDays(new Date(), -1))],
       cardsData: [{ name: 'Total Campaigns', value: 0 }, { name: 'Total Clicks', value: 0 }, { name: 'Total Impressions', value: 0 }, { name: 'Total Cost', value: 0 }]
     };
@@ -108,12 +108,12 @@ export class Dashboard extends Component {
             <div className={["col-md-12 col-sm-12 d-flex flex-wrap p-0", Styles.cardsOuter].join(" ")}>
               {this.state.cardsData.map((itm, i) => {
                 return (
-                <div className={["col-md-3 col-sm-12 p-0"].join(" ")} key={`${i}_cards`}>
-                  <div className={[Styles.cardStyle].join(" ")}>
-                    <span className={Styles.cardCount}>{itm.value}</span>
-                    <span className={Styles.cardTitle}>{itm.name}</span>
-                  </div>
-                </div>)
+                  <div className={["col-md-3 col-sm-12 p-0"].join(" ")} key={`${i}_cards`}>
+                    <div className={[Styles.cardStyle].join(" ")}>
+                      <span className={Styles.cardCount}>{itm.value}</span>
+                      <span className={Styles.cardTitle}>{itm.name}</span>
+                    </div>
+                  </div>)
               })}
             </div>
             <div className={Styles.MainContiner}>
