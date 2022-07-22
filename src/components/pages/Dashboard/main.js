@@ -6,13 +6,13 @@ import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
 import moment from "moment";
 
-import Header from "../../common/Header";
-import CustomTitleH1 from "./CustomTitleH1";
+import Header from "../../organisms/Navbar";
+import CustomTitleH1 from "../../atoms/HeadingText";
 import Table from "./Table";
 // import Tags from "./Tags";
 // import Table2 from "./Table2";
 import { startOfDay, endOfDay, addDays, subDays } from 'date-fns';
-import { CustomDateRangePicker } from "../../common/CustomDateRangePicker"
+import { CustomDateRangePicker } from "../../atoms/CustomDateRangePicker"
 import Table2 from "./Table2";
 export class Dashboard extends Component {
   constructor() {
@@ -32,6 +32,7 @@ export class Dashboard extends Component {
   onChangeDateFilter = (e) => {
     this.setState({ filterDateRange: [moment(e[0]).toDate(), moment(e[1]).toDate()] }, () => {
       this.getCampaignsData();
+      this.getAdGroupsData();
     })
   }
   getCampaignsData = () => {

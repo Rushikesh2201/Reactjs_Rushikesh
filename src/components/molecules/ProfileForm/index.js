@@ -1,7 +1,7 @@
 import React from "react";
-import Styles from "./css/index.module.css"
+import Styles from "./style.module.css"
 
-function Form(props) {
+const ProfileForm = (props) => {
     return (
         <div className={[Styles.form_div, "col-md-6 m-auto"].join(' ')}>
             <div className={Styles.form_container_div}>
@@ -20,7 +20,6 @@ function Form(props) {
 
                         </label>
 
-                        {/* <input type="submit" value="Submit" className={Styles.button} /> */}
 
                     </form>
                 </div>
@@ -29,4 +28,4 @@ function Form(props) {
     )
 }
 
-export default Form;
+export default ProfileForm;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Form from './form'
+import ProfileForm from '../../molecules/ProfileForm'
 // import Navbar from '../Dashboard/navbar'
 import Header from '../../common/Header';
 import { connect } from 'react-redux';
@@ -8,18 +8,14 @@ import { setUser, resetUser } from "./../../../utils/actions";
 export class Profile extends Component {
     constructor() {
         super();
-        this.state = {
-            first_name: "Kiran",
-            last_name: "Dhage",
-            email: "kiran@test.com"
-        }
+        this.state = {}
     }
     render() {
         return (
 
             <div>
                 <Header />
-                <Form user={this.props.user.userInfo.loggedUser} />
+                <ProfileForm user={this.props.user.userInfo.loggedUser} />
             </div>
         )
     }
