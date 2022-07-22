@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Styles from "./css/main.module.css";
-import ApiService from '../../../utils/ApiService';
+import ApiService from '../../../utils/middleware/ApiService';
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProfileForm from '../../molecules/ProfileForm'
 // import Navbar from '../Dashboard/navbar'
-import Header from '../../common/Header';
+import Header from '../../organisms/Navbar';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";

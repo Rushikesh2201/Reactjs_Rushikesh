@@ -1,5 +1,5 @@
 import axios from "axios";
-import { backendHost as API_URL } from "../config/config";
+import { backendHost as API_URL } from "../../config/config";
 
 
 let ApiService = {

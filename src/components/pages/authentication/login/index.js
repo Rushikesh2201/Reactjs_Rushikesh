@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 
 import styles from "./index.module.css";
 import Logo from "./../../../../assets/svg/logo.png";
-import ApiService from "../../../../utils/ApiService";
+import ApiService from "../../../../utils/middleware/ApiService";
 const Login = (props) => {
   let history = useHistory();
   // let model = {
