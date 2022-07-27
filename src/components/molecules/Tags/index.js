@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassChart } from "@fortawesome/free-solid-svg-icons";
-import Styles from "./css/Tags.module.css";
+import Styles from "./style.module.css";
 
 function Tags(props) {
   return (

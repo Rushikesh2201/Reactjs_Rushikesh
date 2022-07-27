@@ -10,12 +10,15 @@ export class Profile extends Component {
         super();
         this.state = {}
     }
+    updateProfile = (props) =>{
+        console.log(props,"ooo")
+    }
     render() {
         return (
 
             <div>
                 <Header />
-                <ProfileForm user={this.props.user.userInfo.loggedUser} />
+                <ProfileForm user={this.props.user.userInfo.loggedUser} updateProfile={(data)=>this.updateProfile(data) }/>
             </div>
         )
     }

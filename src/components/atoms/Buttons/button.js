@@ -2,10 +2,10 @@ import React from "react";
 import Styles from "./style.module.css";
 import { Button } from "react-bootstrap";
 
-let ButtonSubmit = () => {
+let ButtonSubmit = (props) => {
     return (
         <div>
-            <Button className={Styles.button} variant="orange">Submit</Button>
+            <Button className={[Styles.button,props.className].join(" ")} variant="orange" {...props}>Submit</Button>
         </div>
     )
 }
