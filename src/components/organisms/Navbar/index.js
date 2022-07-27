@@ -1,18 +1,16 @@
 import React from "react";
-import Styles from "./css/header.module.css";
-import logo from "../../assets/svg/logo.png";
-// import profile from "../Profile/form";
+import Styles from "./style.module.css";
+import logo from "./../../../assets/svg/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import { setUser, resetUser } from "./../../utils/actions";
+import { setUser, resetUser } from "./../../../utils/actions";
 
 const Header = (props) => {
 
     return (
         <nav className="navbar navbar-expand-md navbar-dark" id="banner">
-            {console.log(props)}
             <div className="container-fluid p-0">
                 {/* <!-- Brand --> */}
                 <a className="navbar-brand" href="/dashboard">

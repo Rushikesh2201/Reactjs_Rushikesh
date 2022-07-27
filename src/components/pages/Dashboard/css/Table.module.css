@@ -1,9 +1,10 @@
 .campaign {
-  font-size: 1.7em;
+  font-size: 1.3em;
   font-family: arial;
   /* padding-left: 1.5em; */
   margin-bottom: 2px;
   font-weight: 600 !important;
+  text-transform: capitalize !important;
 }
 
 .TableContainer {
@@ -15,11 +16,11 @@
 }
 .Table1 {
   width: 100%;
-  height: 15em;
+  height: 2em;
   border: none;
   justify-content: center;
   align-items: center;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   background-color: #fff;
   border-spacing: 0px;
   border: 1px solid;
@@ -45,16 +46,14 @@
 
 .Table1column1 {
   justify-content: center;
-  background-color: #ee5135;
+  background-color: #ef5124;
   align-items: center;
-  padding-top: 0.6em;
-  padding-bottom: 0.6em;
+  /* padding-top: 0.6em;
+  padding-bottom: 0.6em; */
   padding-left: 2em;
   text-align: center;
   color: #fff;
-  /* margin-left : 4em; */
   padding-right: 2em;
-  /* border : .1px solid; */
 }
 
 .Table1Body {

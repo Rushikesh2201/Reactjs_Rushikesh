@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Styles from './css/GoogleAds.module.css'
+import Styles from './style.module.css'
 
 function CustomTitleH1(props) {
     return (

@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import Styles from "./css/main.module.css";
-import ApiService from '../../../utils/ApiService';
+import ApiService from '../../../utils/middleware/ApiService';
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
 import moment from "moment";
-
-import Header from "../../common/Header";
-import CustomTitleH1 from "./CustomTitleH1";
+import Tags from "./../../molecules/Tags"
+import Header from "../../organisms/Navbar";
+import CustomTitleH1 from "../../atoms/HeadingText";
 import Table from "./Table";
 // import Tags from "./Tags";
 // import Table2 from "./Table2";
 import { startOfDay, endOfDay, addDays, subDays } from 'date-fns';
-import { CustomDateRangePicker } from "../../common/CustomDateRangePicker"
+import { CustomDateRangePicker } from "../../atoms/CustomDateRangePicker"
 import Table2 from "./Table2";
+import Table3 from "./Table3";
 export class Dashboard extends Component {
   constructor() {
     super();
@@ -27,19 +28,17 @@ export class Dashboard extends Component {
   }
   componentDidMount() {
     this.getCampaignsData();
-    this.getAdGroupsData();
+    // this.getAdGroupsData();
   }
   onChangeDateFilter = (e) => {
     this.setState({ filterDateRange: [moment(e[0]).toDate(), moment(e[1]).toDate()] }, () => {
       this.getCampaignsData();
-      this.getAdGroupsData();
-
+      // this.getAdGroupsData();
     })
   }
   getCampaignsData = () => {
     const { cardsData } = this.state
     let payload = {
-      customer_id: 4422361780,
       from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
       to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
     };
@@ -71,22 +70,21 @@ export class Dashboard extends Component {
     });
   }
 
-  getAdGroupsData = () => {
-    let payload = {
-      customer_id: 4422361780,
-      from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
-      to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
-    };
-    let header = { Token: this.props.user.userInfo.token }
-    ApiService.get("/v1/getAdsGroups", payload, header, (res, err) => {
-      if (err == null) {
-        this.setState({ adGroupData: res, })
-      } else {
-        console.log(err);
+  // getAdGroupsData = () => {
+  //   let payload = {
+  //     from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
+  //     to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
+  //   };
+  //   let header = { Token: this.props.user.userInfo.token }
+  //   ApiService.get("/v1/getAdsGroups", payload, header, (res, err) => {
+  //     if (err == null) {
+  //       this.setState({ adGroupData: res, })
+  //     } else {
+  //       console.log(err);
 
-      }
-    });
-  }
+  //     }
+  //   });
+  // }
 
   render() {
     return (
@@ -99,14 +97,13 @@ export class Dashboard extends Component {
           <div className={Styles.App}>
 
 
-            <div className="col-md-12  d-flex align-items-center justify-content-between" style={{ padding: '29px 0px 5px 0px' }}>
-              <CustomTitleH1 ads="Dashboard" />
+            <div className="col-md-12  d-flex align-items-center justify-content-end" style={{ padding: '13px 0px 13px 0px' }}>
               <CustomDateRangePicker filterDateRange={this.state.filterDateRange} onChangeDateFilter={(e) => this.onChangeDateFilter(e)}
                 className={[Styles.datePickerStyle].join(" ")} />
             </div>
             <hr className="style4" />
 
-            <div className={["col-md-12 col-sm-12 d-flex flex-wrap p-0", Styles.cardsOuter].join(" ")}>
+            {/* <div className={["col-md-12 col-sm-12 d-flex flex-wrap p-0", Styles.cardsOuter].join(" ")}>
               {this.state.cardsData.map((itm, i) => {
                 return (
                   <div className={["col-md-3 col-sm-12 p-0"].join(" ")} key={`${i}_cards`}>
@@ -116,24 +113,24 @@ export class Dashboard extends Component {
                     </div>
                   </div>)
               })}
-            </div>
+            </div> */}
             <div className={Styles.MainContiner}>
               <Table data={this.state.campaignsData} />
             </div>
 
-            <div className={Styles.MainContiner}>
+            {/* <div className={Styles.MainContiner}>
               <Table2 data={this.state.adGroupData} />
-            </div>
-            {/* <div className={[Styles.container2, 'col-md-12 col-sm-12'].join(" ")}>
+            </div> */}
+            <div className={[Styles.container2, 'col-md-12 col-sm-12'].join(" ")}>
               <Tags
                 heading="Local SEO"
-                url="URL used for reports"
+                url="URL used for reports lpandsonsautocare.com"
                 description="TOP 5 KEYWORDS BY PLATFORM (07 - 31 - 2021)"
               />
               <div>
                 <Table2
                   heading="Local SEO"
-                  url="URL used for reports"
+                  url="URL used for reports lpandsonsautocare.com"
                   description="TOP 5 KEYWORDS BY PLATFORM (07 - 31 - 2021)"
                   data3={[
                     {
@@ -245,7 +242,8 @@ export class Dashboard extends Component {
                   ]}
                 />
               </div>
-            </div> */}
+            </div>
+            {/* <Table3 /> */}
           </div>
         </div>
       </>

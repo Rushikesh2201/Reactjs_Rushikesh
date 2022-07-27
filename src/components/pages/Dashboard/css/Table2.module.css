@@ -28,7 +28,7 @@
   justify-content: center;
   padding-left: 3em;
   padding-right: 3em;
-  background-color: #000000;
+  background-color: #454444;
   color: white;
   text-align: center;
 }
@@ -39,7 +39,7 @@
 
 .Table2column1 {
   justify-content: center;
-  background-color: #ee5135;
+  background-color: #ef5124;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
   text-align: center;
@@ -78,18 +78,22 @@
   font-size: 1em;
   font-family: arial;
   padding-right: 1.5em;
+  margin-bottom: 0px !important;
+  background-color: gray;
+  height: 3rem;
+  align-items: center;
+  display: flex;
+  padding: 0 1em;
 }
 
 .LocalUrlDiv1 {
-  background-color: gray;
   height: 3em;
-  width: 28%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 1em;
-  margin-top: -9em;
-  margin-left: 72%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -8em;
+    color: white;
 }
 
 .LocalParaDiv {

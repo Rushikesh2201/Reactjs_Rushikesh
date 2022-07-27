@@ -1,25 +1,24 @@
 import React, { Component } from 'react'
-import Form from './form'
+import ProfileForm from '../../molecules/ProfileForm'
 // import Navbar from '../Dashboard/navbar'
-import Header from '../../common/Header';
+import Header from '../../organisms/Navbar';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
 export class Profile extends Component {
     constructor() {
         super();
-        this.state = {
-            first_name: "Kiran",
-            last_name: "Dhage",
-            email: "kiran@test.com"
-        }
+        this.state = {}
+    }
+    updateProfile = (props) =>{
+        console.log(props,"ooo")
     }
     render() {
         return (
 
             <div>
                 <Header />
-                <Form user={this.props.user.userInfo.loggedUser} />
+                <ProfileForm user={this.props.user.userInfo.loggedUser} updateProfile={(data)=>this.updateProfile(data) }/>
             </div>
         )
     }

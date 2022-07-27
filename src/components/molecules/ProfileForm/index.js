@@ -1,7 +1,7 @@
 import React from "react";
-import Styles from "./css/index.module.css"
-
-function Form(props) {
+import Styles from "./style.module.css"
+import ButtonSubmit from "./../../atoms/Buttons/button"
+const ProfileForm = (props) => {
     return (
         <div className={[Styles.form_div, "col-md-6 m-auto"].join(' ')}>
             <div className={Styles.form_container_div}>
@@ -9,18 +9,17 @@ function Form(props) {
                     <form >
                         <label className={Styles.form_label}>
 
-                            <h1 className={Styles.text}>FirstName: </h1>
-                            <input type="text" disabled name="name" defaultValue={props.user.firstName} className={Styles.textInput} /> <br />
+                            <h1 className={Styles.text}>First Name: </h1>
+                            <input type="text" name="name" disabled value={props.user.firstName} className={Styles.textInput} /> <br />
 
-                            <h1 className={Styles.text}> LastName: </h1>
-                            <input type="text" disabled name="name" defaultValue={props.user.lastName} className={Styles.textInput} /> <br />
+                            <h1 className={Styles.text}> Last Name: </h1>
+                            <input type="text"  name="name" disabled value={props.user.lastName} className={Styles.textInput} /> <br />
 
                             <h1 className={Styles.textEmail}>Email:</h1>
                             <input type="email" name="name" defaultValue={props.user.email} className={Styles.textInput} disabled /> <br />
 
                         </label>
-
-                        {/* <input type="submit" value="Submit" className={Styles.button} /> */}
+                        <ButtonSubmit disabled onClick={()=>console.log(props.user)}/>
 
                     </form>
                 </div>
@@ -29,4 +28,4 @@ function Form(props) {
     )
 }
 
-export default Form;
+export default ProfileForm;

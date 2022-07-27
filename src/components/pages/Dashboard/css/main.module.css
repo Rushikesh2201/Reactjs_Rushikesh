@@ -9,6 +9,7 @@
 
 .container2 {
   flex: 1;
+  padding: 0px;
   background: #cccccc;
   /* height: 64em; */
   overflow-y: auto;
@@ -78,7 +79,7 @@ hr {
   line-height: 2;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 5px;
-  border-bottom: 9px solid #ee5135;
+  border-bottom: 9px solid #ef5124;
 }
 
 .cardsOuter div:first-child .cardStyle {
