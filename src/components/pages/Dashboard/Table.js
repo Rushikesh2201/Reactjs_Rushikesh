@@ -8,7 +8,7 @@ function Table(props) {
         <>
           {props.data.results.map((el, i) => (
             <div className={Styles.TableContainer} key={`${i}_table_outer`}>
-              <h3 className={Styles.campaign}>Campaign group: {props.data.results[i][0].detail.customer_info} </h3>
+              <h3 className={Styles.campaign}>Campaign group: {props.data.results[0][0].detail.customer_info} </h3>
               <table className={Styles.Table1}>
                 <thead>
                   <tr>
@@ -28,8 +28,8 @@ function Table(props) {
                       <td className={Styles.Table1Data}>{rowdata.clicks}</td>
                       <td className={Styles.Table1Data}>{rowdata.impressions}</td>
                       <td className={Styles.Table1Data}>{Number(rowdata.ctr).toFixed(2)}</td>
-                      <td className={Styles.Table1Data}>${rowdata.average_cpc.toFixed(2)}</td>
-                      <td className={Styles.Table1Data}>${rowdata.cost.toFixed(2)}</td>
+                      <td className={Styles.Table1Data}>${Number(rowdata.average_cpc).toFixed(2)}</td>
+                      <td className={Styles.Table1Data}>${Number(rowdata.cost).toFixed(2)}</td>
                     </tr>
                   </tbody>
                 ))}

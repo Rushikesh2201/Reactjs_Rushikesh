@@ -20,7 +20,7 @@ export class Dashboard extends Component {
     super();
     this.state = {
       loading: false,
-      campaignsData: [],
+      campaignsData: {},
       adGroupData: [],
       filterDateRange: [startOfDay(subDays(new Date(), 31)), endOfDay(addDays(new Date(), -1))],
       cardsData: [{ name: 'Total Campaigns', value: 0 }, { name: 'Total Clicks', value: 0 }, { name: 'Total Impressions', value: 0 }, { name: 'Total Cost', value: 0 }]
@@ -102,22 +102,11 @@ export class Dashboard extends Component {
                 className={[Styles.datePickerStyle].join(" ")} />
             </div>
             <hr className="style4" />
-
-            {/* <div className={["col-md-12 col-sm-12 d-flex flex-wrap p-0", Styles.cardsOuter].join(" ")}>
-              {this.state.cardsData.map((itm, i) => {
-                return (
-                  <div className={["col-md-3 col-sm-12 p-0"].join(" ")} key={`${i}_cards`}>
-                    <div className={[Styles.cardStyle].join(" ")}>
-                      <span className={Styles.cardCount}>{itm.value}</span>
-                      <span className={Styles.cardTitle}>{itm.name}</span>
-                    </div>
-                  </div>)
-              })}
-            </div> */}
             <div className={Styles.MainContiner}>
-              <Table data={this.state.campaignsData} />
+              {Object.keys(this.state.campaignsData).length > 0 ?
+                (<Table data={this.state.campaignsData} />) : (<span></span>)
+              }
             </div>
-
             {/* <div className={Styles.MainContiner}>
               <Table2 data={this.state.adGroupData} />
             </div> */}
