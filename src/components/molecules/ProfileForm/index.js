@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "./style.module.css"
-import ButtonSubmit from "./../../atoms/Buttons/button"
+import PlainButton from "./../../atoms/Buttons/button"
 const ProfileForm = (props) => {
     return (
         <div className={[Styles.form_div, "col-md-6 m-auto"].join(' ')}>
@@ -19,8 +19,7 @@ const ProfileForm = (props) => {
                             <input type="email" name="name" defaultValue={props.user.email} className={Styles.textInput} disabled /> <br />
 
                         </label>
-                        <ButtonSubmit disabled onClick={()=>console.log(props.user)}/>
-
+                        <PlainButton disabled onClick={()=>console.log(props.user)} title="Update"/>
                     </form>
                 </div>
             </div>

@@ -5,25 +5,31 @@ import Header from '../../organisms/Navbar';
 import { connect } from 'react-redux';
 import { withRouter } from "react-router-dom";
 import { setUser, resetUser } from "./../../../utils/actions";
+import ActivityLoader from '../../atoms/ActivityLoader/ActivityLoader';
 export class Profile extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            showLoader: false
+        }
     }
-    updateProfile = (props) =>{
-        console.log(props,"ooo")
+
+    updateProfile = (props) => {
+        console.log(props, "ooo")
     }
     render() {
+        const { showLoader } = this.state;
         return (
-
-            <div>
-                <Header />
-                <ProfileForm user={this.props.user.userInfo.loggedUser} updateProfile={(data)=>this.updateProfile(data) }/>
-            </div>
+            <>
+                {showLoader && <ActivityLoader show={showLoader} />}
+                <div>
+                    <Header />
+                    <ProfileForm user={this.props.user.userInfo.loggedUser} updateProfile={(data) => this.updateProfile(data)} />
+                </div>
+            </>
         )
     }
 }
-
 
 export default connect((state) => ({ user: state.user }), {
     setUser,

@@ -3,7 +3,11 @@
 .App {
   text-align: center;
 }
-
+/*Activity Loader modal background*/
+#activityModal .modal-content {
+  background-color: transparent;
+  border: none;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

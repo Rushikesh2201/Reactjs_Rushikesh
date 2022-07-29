@@ -7,19 +7,20 @@ import { setUser, resetUser } from "./../../../utils/actions";
 import moment from "moment";
 import Tags from "./../../molecules/Tags"
 import Header from "../../organisms/Navbar";
-import CustomTitleH1 from "../../atoms/HeadingText";
+// import CustomTitleH1 from "../../atoms/HeadingText";
 import Table from "./Table";
 // import Tags from "./Tags";
 // import Table2 from "./Table2";
+import ActivityLoader from "./../../atoms/ActivityLoader/ActivityLoader"
 import { startOfDay, endOfDay, addDays, subDays } from 'date-fns';
 import { CustomDateRangePicker } from "../../atoms/CustomDateRangePicker"
 import Table2 from "./Table2";
-import Table3 from "./Table3";
+// import Table3 from "./Table3";
 export class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      showLoader: true,
       campaignsData: {},
       adGroupData: [],
       filterDateRange: [startOfDay(subDays(new Date(), 31)), endOfDay(addDays(new Date(), -1))],
@@ -37,7 +38,7 @@ export class Dashboard extends Component {
     })
   }
   getCampaignsData = () => {
-    const { cardsData } = this.state
+    // const { cardsData } = this.state
     let payload = {
       from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
       to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
@@ -45,26 +46,27 @@ export class Dashboard extends Component {
     let header = { Token: this.props.user.userInfo.token }
     ApiService.get("/v1/getCampaigns", payload, header, (res, err) => {
       if (err == null) {
-        cardsData.forEach((itm) => {
-          if (itm.name === 'Total Campaigns') {
-            itm.value = res.count
-          }
-          if (itm.name === 'Total Clicks') {
-            const total = res.results.reduce((prev, next) => prev + next.clicks, 0);
-            itm.value = total
-          }
-          if (itm.name === 'Total Impressions') {
-            const total = res.results.reduce((prev, next) => prev + next.impressions, 0);
-            itm.value = total
-          }
-          if (itm.name === 'Total Cost') {
-            const total = res.results.reduce((prev, next) => prev + next.cost, 0);
-            itm.value = '$' + total.toFixed(2)
-          }
-        })
-        this.setState({ campaignsData: res, cardsData: cardsData })
+        // cardsData.forEach((itm) => {
+        //   if (itm.name === 'Total Campaigns') {
+        //     itm.value = res.count
+        //   }
+        //   if (itm.name === 'Total Clicks') {
+        //     const total = res.results.reduce((prev, next) => prev + next.clicks, 0);
+        //     itm.value = total
+        //   }
+        //   if (itm.name === 'Total Impressions') {
+        //     const total = res.results.reduce((prev, next) => prev + next.impressions, 0);
+        //     itm.value = total
+        //   }
+        //   if (itm.name === 'Total Cost') {
+        //     const total = res.results.reduce((prev, next) => prev + next.cost, 0);
+        //     itm.value = '$' + total.toFixed(2)
+        //   }
+        // })
+        this.setState({ campaignsData: res, showLoader: false })
       } else {
         console.log(err);
+        this.setState({ showLoader: false })
 
       }
     });
@@ -87,16 +89,15 @@ export class Dashboard extends Component {
   // }
 
   render() {
+    const { showLoader } = this.state;
+
     return (
       <>
+        {showLoader && <ActivityLoader show={showLoader} />}
+
         <Header />
-
         <div className={[Styles.container, 'container-fluid'].join(" ")}>
-
-
           <div className={Styles.App}>
-
-
             <div className="col-md-12  d-flex align-items-center justify-content-end" style={{ padding: '13px 0px 13px 0px' }}>
               <CustomDateRangePicker filterDateRange={this.state.filterDateRange} onChangeDateFilter={(e) => this.onChangeDateFilter(e)}
                 className={[Styles.datePickerStyle].join(" ")} />
