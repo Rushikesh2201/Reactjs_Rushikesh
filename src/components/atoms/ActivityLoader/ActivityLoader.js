@@ -5,7 +5,7 @@ import styles from './css/ActivityLoader.module.css';
 
 const ActivityLoader = (props) => (
   <Modal id="activityModal" show={props.show} centered className={styles.modalContainer}>
-    <Digital size={50} color="#324767" />
+    <Digital size={50} color="#ef5124" />
   </Modal>
 );
 
