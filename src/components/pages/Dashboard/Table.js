@@ -8,7 +8,7 @@ function Table(props) {
         <>
           {props.data.results.map((el, i) => (
             <div className={Styles.TableContainer} key={`${i}_table_outer`}>
-              <h3 className={Styles.campaign}>Campaign group: {props.data.results[0][0].detail.customer_info} </h3>
+              <h3 className={Styles.campaign}>Campaign group: {props.data.results[i][0].detail.customer_info} </h3>
               <table className={Styles.Table1}>
                 <thead>
                   <tr>
