@@ -7,10 +7,11 @@ import { setUser, resetUser } from "./../../../utils/actions";
 import moment from "moment";
 import Tags from "./../../molecules/Tags"
 import Header from "../../organisms/Navbar";
-import CustomTitleH1 from "../../atoms/HeadingText";
 import Table from "./Table";
-// import Tags from "./Tags";
-// import Table2 from "./Table2";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePhone } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import ActivityLoader from "./../../atoms/ActivityLoader/ActivityLoader"
 import { startOfDay, endOfDay, addDays, subDays } from 'date-fns';
 import { CustomDateRangePicker } from "../../atoms/CustomDateRangePicker"
 import Table2 from "./Table2";
@@ -19,8 +20,9 @@ export class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      loading: false,
+      showLoader: true,
       campaignsData: {},
+      callData: {},
       adGroupData: [],
       filterDateRange: [startOfDay(subDays(new Date(), 31)), endOfDay(addDays(new Date(), -1))],
       cardsData: [{ name: 'Total Campaigns', value: 0 }, { name: 'Total Clicks', value: 0 }, { name: 'Total Impressions', value: 0 }, { name: 'Total Cost', value: 0 }]
@@ -28,16 +30,16 @@ export class Dashboard extends Component {
   }
   componentDidMount() {
     this.getCampaignsData();
-    // this.getAdGroupsData();
+    this.getCallData();
   }
   onChangeDateFilter = (e) => {
     this.setState({ filterDateRange: [moment(e[0]).toDate(), moment(e[1]).toDate()] }, () => {
       this.getCampaignsData();
-      // this.getAdGroupsData();
+      this.getCallData();
     })
   }
   getCampaignsData = () => {
-    const { cardsData } = this.state
+    // const { cardsData } = this.state
     let payload = {
       from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
       to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
@@ -45,27 +47,43 @@ export class Dashboard extends Component {
     let header = { Token: this.props.user.userInfo.token }
     ApiService.get("/v1/getCampaigns", payload, header, (res, err) => {
       if (err == null) {
-        cardsData.forEach((itm) => {
-          if (itm.name === 'Total Campaigns') {
-            itm.value = res.count
-          }
-          if (itm.name === 'Total Clicks') {
-            const total = res.results.reduce((prev, next) => prev + next.clicks, 0);
-            itm.value = total
-          }
-          if (itm.name === 'Total Impressions') {
-            const total = res.results.reduce((prev, next) => prev + next.impressions, 0);
-            itm.value = total
-          }
-          if (itm.name === 'Total Cost') {
-            const total = res.results.reduce((prev, next) => prev + next.cost, 0);
-            itm.value = '$' + total.toFixed(2)
-          }
-        })
-        this.setState({ campaignsData: res, cardsData: cardsData })
+        // cardsData.forEach((itm) => {
+        //   if (itm.name === 'Total Campaigns') {
+        //     itm.value = res.count
+        //   }
+        //   if (itm.name === 'Total Clicks') {
+        //     const total = res.results.reduce((prev, next) => prev + next.clicks, 0);
+        //     itm.value = total
+        //   }
+        //   if (itm.name === 'Total Impressions') {
+        //     const total = res.results.reduce((prev, next) => prev + next.impressions, 0);
+        //     itm.value = total
+        //   }
+        //   if (itm.name === 'Total Cost') {
+        //     const total = res.results.reduce((prev, next) => prev + next.cost, 0);
+        //     itm.value = '$' + total.toFixed(2)
+        //   }
+        // })
+        this.setState({ campaignsData: res, showLoader: false })
       } else {
         console.log(err);
+        this.setState({ showLoader: false })
 
+      }
+    });
+  }
+  getCallData = () => {
+    let payload = {
+      from_date: moment(this.state.filterDateRange[0]).format('YYYY-MM-DDT00:00:00'),
+      to_date: moment(this.state.filterDateRange[1]).format('YYYY-MM-DDT00:00:00')
+    };
+    let header = { Token: this.props.user.userInfo.token }
+    ApiService.get("/v1/getcalldata", payload, header, (res, err) => {
+      if (err == null) {
+        this.setState({ callData: res, showLoader: false })
+      } else {
+        console.log(err);
+        this.setState({ showLoader: false })
       }
     });
   }
@@ -87,28 +105,27 @@ export class Dashboard extends Component {
   // }
 
   render() {
+    const { showLoader,callData,campaignsData,filterDateRange } = this.state;
+
     return (
       <>
+        {showLoader && <ActivityLoader show={showLoader} />}
+
         <Header />
-
         <div className={[Styles.container, 'container-fluid'].join(" ")}>
-
-
           <div className={Styles.App}>
-
-
             <div className="col-md-12  d-flex align-items-center justify-content-end" style={{ padding: '13px 0px 13px 0px' }}>
-              <CustomDateRangePicker filterDateRange={this.state.filterDateRange} onChangeDateFilter={(e) => this.onChangeDateFilter(e)}
+              <CustomDateRangePicker filterDateRange={filterDateRange} onChangeDateFilter={(e) => this.onChangeDateFilter(e)}
                 className={[Styles.datePickerStyle].join(" ")} />
             </div>
             <hr className="style4" />
             <div className={Styles.MainContiner}>
-              {Object.keys(this.state.campaignsData).length > 0 ?
-                (<Table data={this.state.campaignsData} />) : (<span></span>)
+              {Object.keys(campaignsData).length > 0 ?
+                (<Table data={campaignsData} />) : (<span></span>)
               }
             </div>
             {/* <div className={Styles.MainContiner}>
-              <Table2 data={this.state.adGroupData} />
+              <Table2 data={.adGroupData} />
             </div> */}
             <div className={[Styles.container2, 'col-md-12 col-sm-12'].join(" ")}>
               <Tags
@@ -232,7 +249,40 @@ export class Dashboard extends Component {
                 />
               </div>
             </div>
-            {/* <Table3 /> */}
+            <div style={{ marginBottom: '3rem' }}>
+              <div className={Styles.outerCallData}>
+                <FontAwesomeIcon
+                  icon={faSquarePhone}
+                  className={Styles.IconCall}
+                  size="7x"
+                  color="#ef5124"
+                />
+                <div className="">
+                  <div className={Styles.headingCalls}>Calls</div>
+                  <div className={["d-flex align-items-center", Styles.callsDateRange].join(" ")}>
+                    <div className={Styles.LocalParaDiv}>
+                      <p className={Styles.LocalPara}>From</p>
+                    </div>
+                    <p>{moment(this.state.filterDateRange[0]).format('DD - MM - YYYY')}</p>
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      color="#ef5124"
+                      className={Styles.IconArrow}
+                      size="sm"
+                    />
+                    <div className={Styles.LocalParaDiv} style={{ marginLeft: 10 }}>
+                      <p className={Styles.LocalPara}>To</p>
+                    </div>
+                    <p>{moment(this.state.filterDateRange[1]).format('DD - MM - YYYY')}</p>
+                  </div>
+                </div>
+              </div>
+              {Object.keys(callData).length > 0 ?
+                (<Table3 data={callData} />) : (<span></span>)
+              }
+            </div>
+
+
           </div>
         </div>
       </>

@@ -72,6 +72,7 @@
   margin-bottom: 0px;
   padding-bottom: 0px;
   height: inherit;
+  background-color: #ef5124;
 }
 
 .LocalUrl {
@@ -97,7 +98,7 @@
 }
 
 .LocalParaDiv {
-  background-color: darkorange;
+  background-color: #ef5124;
   width: max-content;
   height: 1.9em;
   margin-left: 11.6em;

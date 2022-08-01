@@ -8,15 +8,12 @@ import { useHistory } from "react-router-dom";
 import styles from "./index.module.css";
 import Logo from "./../../../../assets/svg/logo.png";
 import ApiService from "../../../../utils/middleware/ApiService";
+import ActivityLoader from "../../../atoms/ActivityLoader/ActivityLoader";
 const Login = (props) => {
   let history = useHistory();
-  // let model = {
-  //   email: "",
-  //   password: "",
-  // };
-  // React States
   const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showLoader, setShowLoader] = useState(false)
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   // const [intialModel, setIntialModel] = useState(model);
 
 
@@ -24,7 +21,7 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
-
+    setShowLoader(true)
     var { uname, pass } = document.forms[0];
 
     let payload = {
@@ -36,10 +33,12 @@ const Login = (props) => {
         props.setUser({
           userInfo: res,
         });
+        setShowLoader(false)
         history.push("/dashboard");
       } else {
         console.log(err);
         setErrorMessages({ message: err.message });
+        setShowLoader(false)
       }
     });
   };
@@ -70,14 +69,18 @@ const Login = (props) => {
   );
 
   return (
-    <div className={styles.app}>
-      <img src={Logo} alt="logo" className={styles.logoStyle} />
+    <>
+      {showLoader && <ActivityLoader show={showLoader} />}
 
-      <div className={styles.loginForm}>
-        <div className={styles.title}>Sign In</div>
-        {renderForm}
+      <div className={styles.app}>
+        <img src={Logo} alt="logo" className={styles.logoStyle} />
+
+        <div className={styles.loginForm}>
+          <div className={styles.title}>Sign In</div>
+          {renderForm}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

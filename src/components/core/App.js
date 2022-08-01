@@ -1,9 +1,9 @@
 import React, { Suspense, lazy } from "react";
 import "./App.css";
 import 'rsuite/dist/rsuite.min.css';
-import Spinner from "react-bootstrap/Spinner";
-
-// import PrivateRoute from "./PrivateRoute";
+import "react-activity/dist/library.css";
+import ActivityLoader from "../atoms/ActivityLoader/ActivityLoader";
+import PrivateRoute from "./PrivateRoute";
 // import PublicRoute from "./PublicRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -38,20 +38,14 @@ function App() {
                         "loaderBackground d-flex justify-content-center"
                       }
                     >
-                      <Spinner
-                        className={"spinner"}
-                        animation="grow"
-                        variant={"info"}
-                        
-                      />
+                      <ActivityLoader show={true} />
                     </div>
                   }
                 >
                   <Switch>
                     <Route exact restricted path="/" component={Login} />
-                    <Route  path="/dashboard" component={Dashboard} />
-                    <Route  path="/profile" component={Profile} />
-
+                    <PrivateRoute exact path="/profile" component={Profile} />
+                    <PrivateRoute exact path="/dashboard" component={Dashboard} />
                     <Route component={NoMatchPage} />
                   </Switch>
                 </Suspense>
