@@ -1,11 +1,10 @@
 .table {
-    margin-left: 3em;
-    width: 80%;
+    /* margin-left: 3em; */
+    width: 100%;
   }
   
   .tableHeading {
     height: 3em;
-    padding-left: 3em;
     border-bottom: 2px solid;
     border-color: gray;
     align-items: center;
@@ -14,12 +13,12 @@
   
   .tableHeading1 {
     height: 3em;
-    padding-right: 25em;
-    padding-left: 3em;
+    padding-left: 1.5em;
     border-bottom: 2px solid;
     border-color: gray;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 40%;
   }
   
   .tableBody {
@@ -29,10 +28,9 @@
   
   .tableData {
     border-bottom: 2px solid;
-    height: 3em;
+    height: 2.5em;
     border-color: gray;
     align-items: center;
-    padding-left: 6em;
     justify-content: center;
   }
   
@@ -41,7 +39,6 @@
     height: 3em;
     padding-left: 1.5em;
     border-color: gray;
-    padding-right: 3em;
     align-items: center;
     justify-content: center;
   }
@@ -73,7 +70,7 @@
   
     .tableData {
       width: 130%;
-      height: 3em;
+      height: 2.5em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,11 +126,11 @@
     }
   
     .tableData {
-      height: 3em;
+      height: 2.5em;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: -9em;
+      /* margin-left: -9em; */
     }
   
     .tableData1 {
