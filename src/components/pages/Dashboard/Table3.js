@@ -10,8 +10,6 @@ const Table3 = (props) => {
             {Object.keys(props.data).length > 0 && props.data.results.length > 0 && (
 
                 <table className={Styles.table}>
-                                    {console.log(props.data)}
-
                     <thead>
                         <tr>
                             <th className={Styles.tableHeading1}>Name</th>
@@ -23,7 +21,7 @@ const Table3 = (props) => {
                         </tr>
                     </thead>
                     {props.data.results.map((rowdata, i) => (
-                        <tbody className={Styles.tableBody}>
+                        <tbody className={Styles.tableBody} key={`${i}_table3`}>
                             <tr>
                                 <td className={Styles.tableData1}>{rowdata.detail.tracking_info.name}</td>
                                 <td className={Styles.tableData}>{rowdata.first_time_callers}</td>

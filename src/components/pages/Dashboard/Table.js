@@ -22,7 +22,6 @@ function Table(props) {
                 </thead>
                 {el.map((rowdata, i) => (
                   <tbody className={Styles.Table1Body} key={`${i}_table_body`}>
-                    {console.log(rowdata)}
                     <tr>
                       <td className={Styles.Table1Data}>{rowdata.detail.name}</td>
                       <td className={Styles.Table1Data}>{rowdata.clicks}</td>

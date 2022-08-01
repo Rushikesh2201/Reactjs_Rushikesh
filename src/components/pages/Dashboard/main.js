@@ -263,7 +263,6 @@ export class Dashboard extends Component {
                     <div className={Styles.LocalParaDiv}>
                       <p className={Styles.LocalPara}>From</p>
                     </div>
-                    {console.log(this.state.filterDateRange)}
                     <p>{moment(this.state.filterDateRange[0]).format('DD - MM - YYYY')}</p>
                     <FontAwesomeIcon
                       icon={faArrowRight}
