@@ -1,15 +1,19 @@
 .LocalTableDiv {
-  flex: 1;
   display: flex;
   flex-direction: row;
   padding-top: 0.5em;
   margin-bottom: 2em;
+  justify-content: center;
+  align-items: center;
 }
+
 .Table2 {
   width: 49%;
+  /* width: auto; */
   height: 15em;
   border: none;
   margin-left: 1em;
+  margin-right: 1em;
   background-color: #fff;
   border-spacing: 0px;
 }
@@ -40,6 +44,8 @@
 .Table2column1 {
   justify-content: center;
   background-color: #ef5124;
+  padding-left: 3em;
+  padding-right: 3em;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
   text-align: center;
@@ -57,15 +63,16 @@
 
 .Local {
   margin-left: 3.8em;
-  margin-top: -3.4em;
+  position: absolute;
+  bottom: 380px;
+  //margin-top: -3.4em;
   font-size: 2.5em;
-  margin-bottom: 1em;
+  //margin-bottom: 1em;
 }
 
 .LocalPara {
   padding: 0 0.5em;
   color: white;
-  /* padding-top: 0.4em; */
   align-items: center;
   display: flex;
   justify-content: center;
@@ -89,12 +96,15 @@
 
 .LocalUrlDiv1 {
   height: 3em;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: -8em;
-    color: white;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 490px;
+  /* bottom: 300px; */
+  /* margin-top: -8em; */
+  color: white;
 }
 
 .LocalParaDiv {
@@ -103,33 +113,43 @@
   height: 1.9em;
   margin-left: 11.6em;
   border-radius: 5px;
-  margin-top: 3.6em;
-  margin-bottom: 5.5em;
+  position: relative;
+  /* top : 10px; */
+  bottom: 70px;
+  /* margin-top: 1em; */
+  margin-bottom: 0.1em;
 }
 
 @media screen and (max-width: 375px) {
   .Icon {
     width: 30%;
-    margin-left: -0.1em;
+    /* margin-left: -0.1em; */
+    position: relative;
+    right: 15px;
+    top: 10px;
   }
 
   .Local {
     font-size: 1.8em;
-    margin-left: 2.5em;
-    margin-top: -4em;
+    margin-left: 3em;
+    //margin-top: -4em;
+    /* position: absolute; */
+    /* top: 660px; */
+    left: 15px;
+    bottom: 500px;
   }
 
   .LocalParaDiv {
     font-size: 0.6em;
-    margin-top: 8em;
-    margin-left: 11em;
+    /* margin-top: .1em; */
+    margin-left: 10.7em;
   }
 
   .LocalUrlDiv1 {
     width: 55%;
     margin-left: 10.1em;
     height: 2em;
-    margin-top: -8.8em;
+    margin-top: 6.5em;
   }
   .LocalTableDiv {
     display: flex;
@@ -139,58 +159,70 @@
   }
 
   .Table2 {
-    font-size: 0.7em;
-    margin-left: 0.3em;
+    font-size: 0.6em;
+    /* margin-left: 0.3em; */
   }
 
   .Table3 {
     margin-top: 1em;
-    font-size: 0.7em;
-    margin-left: 2em;
+    font-size: 0.6em;
+    /* margin-left: 2em; */
   }
 }
 
 @media screen and (min-width: 376px) and (max-width: 414px) {
   .Icon {
-    margin-left: -0.1em;
+    position: relative;
+    right: 15px;
+    top: 40px;
+    /* margin-left: -0.1em; */
     width: 30%;
   }
   .LocalTableDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: anywhere;
+    overflow-x: hidden;
   }
 
   .Local {
     font-size: 1.8em;
     margin-left: 2.8em;
-    margin-top: -4.5em;
+    /* position: relative; */
+    bottom: 540px;
+    /* margin-top: -4.5em; */
   }
 
   .LocalParaDiv {
     font-size: 0.7em;
-    margin-top: 6em;
-    margin-left: 10.5em;
+    /* margin-top: .1em; */
+    /* position: absolute; */
+    bottom: 40px;
+    /* left : 3px; */
+    margin-left: 10.3em;
+    /* margin-bottom : 3em; */
   }
 
   .LocalUrlDiv1 {
-    width: 57%;
+    width: 59%;
     height: 2em;
-    margin-top: -7em;
-    margin-left: 10.6em;
-    padding-bottom: 1em;
+    /* margin-top: -7em; */
+    margin-left: 10em;
+    /* position: absolute; */
+    top: 660px;
+    /* padding-bottom: 1em; */
   }
 
   .Table2 {
-    font-size: 0.8em;
-    margin-left: 0.3em;
+    /* margin-top : 1em; */
+    font-size: 0.7  em;
+    /* margin-left: 0.3em; */
   }
 
   .Table3 {
-    font-size: 0.8em;
+    font-size: 0.7em;
     margin-top: 1em;
-    margin-left: 2.2em;
+    /* margin-left: 2.2em; */
   }
 }
 
@@ -203,46 +235,107 @@
   }
 
   .Table2 {
-    font-size: 1em;
-    margin-left: 0.5em;
+    font-size: 0.9em;
+    /* margin-left: 0.5em; */
   }
 
   .Table3 {
-    font-size: 1em;
+    font-size: 0.9em;
     margin-top: 1em;
-    margin-left: 2.5em;
+    /* margin-left: 2.5em; */
   }
 
   .Icon {
     width: 25%;
-    margin-left: -0.1em;
+    position: relative;
+    right: 15px;
+    top: 60px;
+    /* margin-left: -0.1em; */
   }
 
   .Local {
     margin-left: 2.3em;
+    position: relative;
+    bottom: 70px;
   }
 
   .LocalParaDiv {
     font-size: 0.7em;
-    margin-top: 6em;
+    /* margin-top: 6em; */
+    margin-top: 0.1em;
   }
 
   .LocalUrlDiv1 {
-    width: 57%;
+    width: 72%;
     height: 2em;
-    margin-left: 14em;
+    margin-left: 9em;
+    /* position: absolute; */
+    top: 810px;
   }
 }
 
-@media screen and (min-width: 541px) and (max-width: 768px) {
+@media screen and (min-width: 541px) and (max-width: 600px) {
   .Icon {
     width: 25%;
-    margin-left: -0.1em;
+    position: relative;
+    right: 15px;
+    top: 40px;
+    /* margin-left: -0.1em; */
   }
 
   .LocalUrlDiv1 {
     width: 50%;
-    margin-left: 23em;
+    margin-left: 18em;
+    position: absolute;
+    top: 830px;
+    /* bottom : 700px; */
+  }
+
+  .LocalTableDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* overflow-x: anywhere; */
+  }
+
+  .Table2 {
+    font-size: 0.9em;
+    /* margin-left: 0.5em; */
+  }
+
+  .Table3 {
+    font-size: 0.9em;
+    margin-top: 1em;
+    /* margin-left: 2.5em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative; */
+    /* bottom: 60px; */
+    right: 30px;
+    margin-top: 2em;
+  }
+
+  .Local {
+    /* position: absolute; */
+    bottom: 700px;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 710px) {
+  .Icon {
+    width: 25%;
+    position: relative;
+    right: 15px;
+    top: 40px;
+    /* margin-left: -0.1em; */
+  }
+
+  .LocalUrlDiv1 {
+    width: 53%;
+    margin-left: 20.1em;
+    margin-top: 2em;
   }
 
   .LocalTableDiv {
@@ -253,26 +346,93 @@
   }
 
   .Table2 {
-    font-size: 1.5em;
-    margin-left: 0.5em;
+    font-size: 1em;
+    /* margin-left: 0.5em; */
   }
 
   .Table3 {
-    font-size: 1.5em;
+    font-size: 1em;
+    /* margin-top: 1em; */
+    /* margin-left: 2.5em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative; */
+    bottom: 50px;
     margin-top: 1em;
-    margin-left: 2.5em;
+    right : 26px;
+    /* margin-bottom : .1em; */
+  }
+
+  .Local {
+    /* position: absolute; */
+    bottom: 750px;
+    left : 3px;
+    /* top : 1150px; */
   }
 }
+
+@media screen and (min-width: 711px) and (max-width: 768px) {
+  .Icon {
+    width: 25%;
+    position: relative;
+    right: 15px;
+    top: 40px;
+    /* margin-left: -0.1em; */
+  }
+
+  .LocalUrlDiv1 {
+    width: 50%;
+    margin-left: 23.2em;
+    margin-top: 33em;
+  }
+
+  .LocalTableDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: anywhere;
+  }
+
+  .Table2 {
+    font-size: 1.2em;
+    /* margin-left: 0.5em; */
+  }
+
+  .Table3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+    /* margin-left: 2.5em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative; */
+    bottom: 50px;
+    margin-top: 1em;
+    /* margin-bottom : .1em; */
+  }
+
+  .Local {
+    /* position: absolute; */
+    bottom: 880px;
+    /* top : 1150px; */
+  }
+}
+
 
 @media screen and (min-width: 769px) and (max-width: 820px) {
   .Icon {
     width: 25%;
-    margin-left: -0.1em;
+    position: relative;
+    right: 15px;
+    top: 50px;
+    /* margin-left: -0.1em; */
   }
 
   .LocalUrlDiv1 {
     width: 47%;
-    margin-left: 26em;
+    margin-left: 27em;
+    top: 1040px;
   }
 
   .LocalTableDiv {
@@ -283,26 +443,44 @@
   }
 
   .Table2 {
-    font-size: 1.5em;
-    margin-left: 0.5em;
+    font-size: 1.2em;
+    /* margin-left: 0.5em; */
   }
 
   .Table3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin-top: 1em;
-    margin-left: 2.5em;
+    /* margin-left: 2.5em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative;
+    bottom: 70px; */
+    margin-top: 3em;
+  }
+
+  .Local {
+    /* position: absolute; */
+    bottom: 900px;
+    /* top : 1px; */
   }
 }
 
 @media screen and (min-width: 821px) and (max-width: 912px) {
   .Icon {
     width: 25%;
-    margin-left: -0.1em;
+    position: relative;
+    right: 15px;
+    top: 50px;
+    /* margin-left: -0.1em; */
   }
 
   .LocalUrlDiv1 {
-    width: 48%;
-    margin-left: 28.5em;
+    /* width: 48%; */
+    /* margin-left: 29em; */
+    /* position: absolute; */
+    /* top: 1200px; */
+    padding-top : 750px;
   }
 
   .LocalTableDiv {
@@ -314,12 +492,130 @@
 
   .Table2 {
     font-size: 1.5em;
-    margin-left: 0.5em;
+    /* margin-left: 0.5em; */
   }
 
   .Table3 {
     font-size: 1.5em;
     margin-top: 1em;
-    margin-left: 2.5em;
+    /* margin-left: 2.5em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative; */
+    /* bottom: 70px; */
+    margin-top: 3em;
+    /* left: 10px; */
+  }
+
+  .Local {
+    /* position: absolute; */
+    bottom: 1090px;
+    /* top : 1300px; */
+    /* left: 40px; */
+  }
+}
+
+@media screen and (min-width: 913px) and (max-width: 1024px) {
+  .Table3 {
+    font-size: 0.8em;
+    /* margin-right : 1em; */
+  }
+
+  .Table2 {
+    font-size: 0.8em;
+  }
+
+  /* .LocalParaDiv {
+    position: relative;
+    bottom: 70px;
+    margin-top: 3em;
+  } */
+
+  .Local {
+    /* position: absolute; */
+    bottom: 420px;
+    left: 10px;
+  }
+
+  .Icon {
+    width: 15%;
+    position: relative;
+    right: 10px;
+    top: 20px;
+    /* margin-left: -0.1em; */
+  }
+
+  .LocalParaDiv {
+    /* position: relative;*/
+    bottom: 100px;
+    right: 20px;
+    margin-top: 3em;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1188px) {
+  .Table3 {
+    font-size: .9em;
+  }
+
+  .Table2 {
+    font-size: .9em;
+  }
+
+  .Local {
+    margin-bottom: 1.2em;
+    left : 0px;
+  }
+
+  .LocalUrlDiv1 {
+    padding-top: 70px;
+  }
+
+  .LocalParaDiv{
+    right : 30px;
+  }
+}
+
+@media screen and (min-width: 1189px) and (max-width: 1319px) 
+{
+  .Table3 {
+    font-size: 1em;
+  }
+
+  .Table2 {
+    font-size: 1em;
+  }
+
+  .Local {
+    margin-bottom: 2em;
+     left : 0px;
+  }
+
+  .LocalUrlDiv1 {
+    padding-top: 100px;
+  }
+
+  .LocalParaDiv{
+    right : 30px;
+  }
+}
+
+@media screen and (min-width: 1320px) and (max-width: 1337px) {
+  .Table3 {
+    font-size: 1.1em;
+  }
+
+  .Table2 {
+    font-size: 1.1em;
+  }
+
+  .LocalUrlDiv1 {
+    padding-top: 130px;
+  }
+
+  .Local {
+    margin-bottom: 2.8em;
+     left : 30px;
   }
 }

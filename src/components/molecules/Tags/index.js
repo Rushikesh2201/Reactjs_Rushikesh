@@ -5,16 +5,19 @@ import Styles from "./style.module.css";
 
 function Tags(props) {
   return (
-    <div className={Styles.MainContent}>
-      <FontAwesomeIcon
-        icon={faMagnifyingGlassChart}
-        size="10x"
-        className = {Styles.Icon}
-      />
-      <h2 className={Styles.Local}>
-        {props.heading}
-      </h2>
-
+    <div className={[Styles.MainContent]}>
+      <div className={[Styles.TagContainer]}>
+        <div>
+          <FontAwesomeIcon
+            icon={faMagnifyingGlassChart}
+            size="10x"
+            className={Styles.Icon}
+          />
+        </div>
+        <div>
+        <h2 className={Styles.Local}>{props.heading}</h2>
+        </div>
+      </div>
       <div className={Styles.LocalUrlDiv}>
         <h2 className={Styles.LocalUrl}>{props.url}</h2>
       </div>
